@@ -179,6 +179,7 @@ public class MPIN extends AppCompatActivity {
             public void onClick(View v) {
                 if (validateFields()) {
                     Toast.makeText(MPIN.this, "No Screen", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(MPIN.this, MainActivity.class));
                 } else {
                     Toast.makeText(MPIN.this, "Please fill all details", Toast.LENGTH_SHORT).show();
                 }
