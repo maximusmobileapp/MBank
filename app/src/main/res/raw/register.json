@@ -1,0 +1,90 @@
+{
+  "screen" : {
+    "title" : "Register",
+    "components" : [
+      {
+        "type": "text",
+        "value": "Register",
+        "style": "header",
+        "action": "",
+        "textColor": "#000000",
+        "text": ""
+      },
+      {
+        "type": "text_name",
+        "value": "Name",
+        "style": "",
+        "action": "",
+        "textColor": "#000000",
+        "text": ""
+      },
+      {
+        "type": "edit_text",
+        "value": "",
+        "style": "",
+        "action": "",
+        "hint": "Enter Name",
+        "input_type": "textName",
+        "borderColor": "#000000",
+        "textColor": "#000000",
+        "text": ""
+      },
+      {
+        "type": "text_mobile",
+        "value": "Mobile",
+        "style": "",
+        "action": "",
+        "textColor": "#000000",
+        "text": ""
+      },
+      {
+        "type": "editmobile",
+        "value": "",
+        "style": "",
+        "action": "",
+        "hint": "Enter Mobile No.",
+        "input_type": "textMobile",
+        "borderColor": "#000000",
+        "textColor": "#000000",
+        "text": "",
+        "max_length": 10
+      },
+      {
+        "type": "text_email",
+        "value": "Email",
+        "style": "",
+        "action": "",
+        "textColor": "#000000",
+        "text": ""
+      },
+      {
+        "type": "edit_text",
+        "value": "",
+        "style": "",
+        "action": "",
+        "hint": "Enter Email",
+        "input_type": "textEmail",
+        "borderColor": "#000000",
+        "textColor": "#000000",
+        "text": ""
+      },
+      {
+        "type": "buttonregister",
+        "value": "",
+        "style": "",
+        "action": "register",
+        "textColor": "",
+        "text": "Register"
+      },
+      {
+        "type": "login_text",
+        "value": "Already have an account? Sign In",
+        "style": "link",
+        "action": "login",
+        "textColor": "#ff33b5e5",
+        "text": "",
+        "textSize": 16
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "screen": {
+    "title": "OTP",
+    "components": [
+      {
+        "type": "text",
+        "value": "OTP",
+        "style": "header",
+        "textColor": "#000000"
+      },
+      {
+        "type" : "text_otp",
+        "value" : "Enter OTP",
+        "textColor" : "#000000"
+      },
+      {
+        "type" : "edit_otp",
+        "value" : "Enter OTP",
+        "hint": "Enter OTP",
+        "input_type": "textOTP",
+        "borderWidth": 2,
+        "borderColor": "#000000",
+        "textColor": "#000000",
+        "maxlength": 6
+      },
+      {
+        "type": "buttonconfirm",
+        "text": "Verify OTP",
+        "action": "confirm"
+      }
+    ]
+  }
+}

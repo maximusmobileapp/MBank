@@ -1,0 +1,100 @@
+{
+  "screen": {
+    "title": "Login",
+    "components": [
+      {
+        "type": "text",
+        "value": "Login",
+        "style": "header",
+        "textColor": "#000000",
+        "textStyle": "bold",
+        "hint": "",
+        "input_type": "",
+        "borderColor": "",
+        "action": ""
+      },
+      {
+        "type": "text_componets",
+        "value": "Account Number",
+        "style": "",
+        "textColor": "#000000",
+        "textStyle": "",
+        "hint": "",
+        "input_type": "",
+        "borderColor": "",
+        "action": ""
+      },
+      {
+        "type": "edittext_acc",
+        "value": "",
+        "style": "",
+        "textStyle": "",
+        "action": "",
+        "borderColor": "",
+        "hint": "Enter your account number",
+        "input_type": "textaccno",
+        "textColor": "#000000",
+        "max_length": 0
+      },
+      {
+        "type": "text_componets",
+        "value": "Mobile Number",
+        "style": "",
+        "textStyle": "",
+        "hint": "",
+        "input_type": "",
+        "action": "",
+        "borderColor": "",
+        "textColor": "#000000"
+      },
+      {
+        "type": "edittext_mob",
+        "value": "",
+        "style": "",
+        "textStyle": "",
+        "hint": "Enter your mobile number",
+        "input_type": "textmobileno",
+        "action": "",
+        "borderColor": "#000000",
+        "textColor": "#000000",
+        "max_length": 10
+      },
+      {
+        "type": "button",
+        "value": "",
+        "style": "",
+        "textStyle": "",
+        "textColor": "",
+        "hint": "",
+        "input_type": "",
+        "borderColor": "",
+        "text": "Submit",
+        "action": "login"
+      },
+      {
+        "type": "forget_text",
+        "value": "Forget Password ?",
+        "style": "link",
+        "textStyle": "",
+        "hint": "",
+        "input_type": "",
+        "borderColor": "",
+        "action": "login",
+        "textColor": "#ff33b5e5",
+        "textSize": 16
+      },
+      {
+        "type": "register_text",
+        "value": "Don't have an account? Register",
+        "style": "link",
+        "textStyle": "",
+        "hint": "",
+        "input_type": "",
+        "borderColor": "",
+        "action": "register",
+        "textColor": "#ff33b5e5",
+        "textSize": 16
+      }
+    ]
+  }
+}
