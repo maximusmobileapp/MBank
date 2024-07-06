@@ -1,0 +1,51 @@
+{
+  "screen": {
+    "title": "MPIN",
+    "components": [
+      {
+        "type": "text",
+        "value": "MPIN",
+        "style": "header",
+        "textColor": "#000000",
+        "hint": "",
+        "input_type": "",
+        "borderColor": ""
+      },
+      {
+        "type": "text_New",
+        "value": "Enter MPIN",
+        "style": "",
+        "textColor": "#000000",
+        "hint": "",
+        "input_type": "",
+        "borderColor": ""
+      },
+      {
+        "type": "edit_MPIN",
+        "value": "Enter MPIN",
+        "style": "",
+        "textColor": "#000000",
+        "hint": "Enter MPIN",
+        "input_type": "textMPIN",
+        "borderColor": "#000000",
+        "maxlength": 4
+      },
+      {
+        "type": "buttonlogin",
+        "text": "Login",
+        "action": "login",
+        "hint": "",
+        "input_type": "",
+        "borderColor": ""
+      },
+      {
+        "type": "forget_text",
+        "value": "Forget Password ?",
+        "style": "link",
+        "action": "login",
+        "textColor": "#ff33b5e5",
+        "textSize": 16
+      }
+    ]
+  }
+}

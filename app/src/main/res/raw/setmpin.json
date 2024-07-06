@@ -1,0 +1,53 @@
+{
+  "screen" : {
+    "title" : "Create MPIN",
+    "components" : [
+      {
+        "type" : "text",
+        "value" : "Set MPIN",
+        "style" : "header",
+        "textColor": "#000000"
+      },
+      {
+        "type" : "text_New",
+        "value" : "Enter New MPIN",
+        "style" : "",
+        "textColor" : "#000000"
+      },
+      {
+        "type" : "edit_New",
+        "value" : "Enter MPIN",
+        "style" : "",
+        "textColor": "#000000",
+        "hint": "Enter MPIN",
+        "input_type": "textMPIN",
+        "borderColor": "#000000",
+        "maxlength": 4
+      },
+      {
+        "type" : "text_Confirm",
+        "value" : "Confirm New MPIN",
+        "style" : "",
+        "textColor" : "#000000"
+      },
+      {
+        "type" : "edit_New",
+        "value" : "Enter Confirm MPIN",
+        "style" : "",
+        "hint": "Enter Confirm MPIN",
+        "input_type": "textMPIN",
+        "borderWidth": 2,
+        "borderColor": "#000000",
+        "textColor": "#000000",
+        "maxlength": 4
+      },
+      {
+        "type": "buttonnext",
+        "value" : "",
+        "style" : "",
+        "text": "Next",
+        "action": "next"
+      }
+    ]
+  }
+}

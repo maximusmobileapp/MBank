@@ -1,0 +1,13 @@
+{
+  "screen": {
+    "title": "Splash",
+    "components": [
+      {
+        "type": "text_splash",
+        "value": "Splash",
+        "text" : "Maximus Bank",
+        "textColor": "#FFFFFF"
+      }
+    ]
+  }
+}

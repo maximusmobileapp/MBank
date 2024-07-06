@@ -1,0 +1,31 @@
+{
+  "screen": {
+    "title": "Forget Password",
+    "components": [
+      {
+        "type": "text",
+        "value": "Forget Password",
+        "style": "header",
+        "textColor": "#000000",
+        "textStyle": "bold"
+      },
+      {
+        "type": "text_accno",
+        "value": "Account No.",
+        "textColor": "#000000"
+      },
+      {
+        "type": "edittext_account",
+        "hint": "Enter Account No.",
+        "input_type": "textAccount",
+        "borderColor": "#000000",
+        "textColor": "#000000"
+      },
+      {
+        "type": "buttonforget",
+        "text": "Forget Password",
+        "action": "forget password"
+      }
+    ]
+  }
+}
