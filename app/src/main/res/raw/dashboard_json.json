@@ -1,0 +1,118 @@
+{
+  "header": {
+    "title": "Banking App",
+    "logo": "ic_logo",
+    "background": "#1976D2"
+  },
+  "bottom_navigation": {
+    "items": [
+      {
+        "id": 1,
+        "title": "Home",
+        "icon": "ic_home"
+      },
+      {
+        "id": 2,
+        "title": "Transactions",
+        "icon": "ic_transactions"
+      },
+      {
+        "id": 3,
+        "title": "Profile",
+        "icon": "ic_profile"
+      }
+    ]
+  },
+  "drawer": {
+    "items": [
+      {
+        "id": 1,
+        "title": "Home",
+        "icon": "ic_home"
+      },
+      {
+        "id": 2,
+        "title": "Account",
+        "icon": "ic_account"
+      },
+      {
+        "id": 3,
+        "title": "Settings",
+        "icon": "ic_settings"
+      }
+    ]
+  },
+  "dashboard": {
+    "account_balance": {
+      "title": "Account Balance",
+      "icon": "ic_account_balance",
+      "background": "#03A9F4",
+      "action": "VIEW_ACCOUNT_BALANCE"
+    },
+    "grid_modules": [
+      {
+        "id": 1,
+        "title": "Fund Transfer",
+        "icon": "ic_fund_transfer",
+        "background": "#4CAF50",
+        "action": "INITIATE_FUND_TRANSFER"
+      },
+      {
+        "id": 2,
+        "title": "Bill Payments",
+        "icon": "ic_bill_payment",
+        "background": "#FFC107",
+        "action": "PAY_BILLS"
+      },
+      {
+        "id": 3,
+        "title": "Transaction History",
+        "icon": "ic_transaction_history",
+        "background": "#FF5722",
+        "action": "VIEW_TRANSACTION_HISTORY"
+      },
+      {
+        "id": 4,
+        "title": "Notifications",
+        "icon": "ic_notifications",
+        "background": "#9C27B0",
+        "action": "VIEW_NOTIFICATIONS"
+      },
+      {
+        "id": 5,
+        "title": "Customer Support",
+        "icon": "ic_customer_support",
+        "background": "#795548",
+        "action": "CONTACT_CUSTOMER_SUPPORT"
+      },
+      {
+        "id": 6,
+        "title": "Deposit",
+        "icon": "ic_deposit",
+        "background": "#FF9800",
+        "action": "MAKE_DEPOSIT"
+      },
+      {
+        "id": 7,
+        "title": "Withdraw",
+        "icon": "ic_withdraw",
+        "background": "#673AB7",
+        "action": "MAKE_WITHDRAWAL"
+      },
+      {
+        "id": 8,
+        "title": "Loan",
+        "icon": "ic_loan",
+        "background": "#E91E63",
+        "action": "APPLY_FOR_LOAN"
+      },
+      {
+        "id": 9,
+        "title": "Insurance",
+        "icon": "ic_insurance",
+        "background": "#2196F3",
+        "action": "MANAGE_INSURANCE"
+      }
+    ]
+  }
+}

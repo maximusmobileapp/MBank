@@ -1,0 +1,19 @@
+{
+  "activity_title": "Fund Transfer",
+  "cards": [
+    {
+      "type": "within_bank",
+      "title": "Within Bank Fund Transfer",
+      "icon": "ic_within_bank",
+      "background_color": "#4CAF50",
+      "action": "initiate_within_bank_transfer"
+    },
+    {
+      "type": "other_bank",
+      "title": "Other Bank Fund Transfer",
+      "icon": "ic_other_bank",
+      "background_color": "#FF5722",
+      "action": "initiate_other_bank_transfer"
+    }
+  ]
+}
