@@ -1,4 +1,4 @@
-package com.maximus.maximusbank;
+package com.maximus.maximusbank.activity.landing;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -17,6 +17,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import com.facebook.shimmer.Shimmer;
 import com.facebook.shimmer.ShimmerFrameLayout;
+import com.maximus.maximusbank.ForgetPassword;
+import com.maximus.maximusbank.R;
+import com.maximus.maximusbank.activity.DashboardActivity;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -168,10 +172,10 @@ public class MPIN extends AppCompatActivity {
 
         shimmerFrameLayout.addView(buttonlogin);
         Shimmer shimmer = new Shimmer.AlphaHighlightBuilder()
-                .setDuration(1500) // Duration of shimmer animation
-                .setBaseAlpha(0.7f) // Alpha of the base color
-                .setHighlightAlpha(1f) // Alpha of the highlight color
-                .setDirection(Shimmer.Direction.LEFT_TO_RIGHT) // Animation direction
+                .setDuration(1500)
+                .setBaseAlpha(0.7f)
+                .setHighlightAlpha(1f)
+                .setDirection(Shimmer.Direction.LEFT_TO_RIGHT)
                 .build();
         shimmerFrameLayout.setShimmer(shimmer);
         buttonlogin.setOnClickListener(new View.OnClickListener() {
@@ -179,7 +183,7 @@ public class MPIN extends AppCompatActivity {
             public void onClick(View v) {
                 if (validateFields()) {
                     Toast.makeText(MPIN.this, "No Screen", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(MPIN.this, MainActivity.class));
+                    startActivity(new Intent(MPIN.this, DashboardActivity.class));
                 } else {
                     Toast.makeText(MPIN.this, "Please fill all details", Toast.LENGTH_SHORT).show();
                 }

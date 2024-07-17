@@ -1,4 +1,4 @@
-package com.maximus.maximusbank;
+package com.maximus.maximusbank.activity.landing;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +19,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.facebook.shimmer.Shimmer;
 import com.facebook.shimmer.ShimmerFrameLayout;
+import com.maximus.maximusbank.ForgetPassword;
+import com.maximus.maximusbank.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -232,7 +234,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (validateFields()) {
 //                    showOtpDialog();
 
-                    Intent intent = new Intent(LoginActivity.this, OTP.class);
+                    Intent intent = new Intent(LoginActivity.this, OTPActivity.class);
                     startActivity(intent);
 
                 } else {

@@ -9,12 +9,9 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CompoundButton;
-import android.widget.FrameLayout;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -22,13 +19,13 @@ import android.widget.ToggleButton;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.core.view.GravityCompat;
 import androidx.core.widget.NestedScrollView;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.maximus.maximusbank.Utils.Utils;
+import com.maximus.maximusbank.activity.AccountActivity;
 import com.maximus.maximusbank.adapter.TransactionsAdapter;
 
 import org.json.JSONArray;
@@ -65,20 +62,18 @@ public class MainActivity extends AppCompatActivity {
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT));
         rootView.setOrientation(LinearLayout.VERTICAL);
+        rootView.setBackgroundColor(Color.parseColor("#ffffff"));
 
-        // Set up the header
+        init();
+
         setupHeader();
 
-        // Set up the account balance card
         setupAccountBalanceCard();
 
-        // Set up the grid layout for modules
         setupGridLayout();
 
-        // Set up the recent transactions RecyclerView
         setupRecyclerView();
 
-        // Add root view to scroll view
         scrollView.addView(rootView);
 
         // Set content view to DrawerLayout
@@ -86,6 +81,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Add scroll view to DrawerLayout
         drawerLayout.addView(scrollView);
+    }
+
+    private void init(){
+
     }
 
     private void setupHeader() {
@@ -214,18 +213,13 @@ public class MainActivity extends AppCompatActivity {
         toggleButton.setTextColor(Color.WHITE); // Set text color
 
         // ToggleButton listener to switch between showing actual and masked values
-        toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    // Show actual values
-                    accountNumberTextView.setText("Account Number: " + accountNumber);
-                    accountBalanceTextView.setText("Balance: " + accountBalance);
-                } else {
-                    // Show masked values (or alternative display)
-                    accountNumberTextView.setText("Account Number: **** **** **** 5678");
-                    accountBalanceTextView.setText("Balance: ****");
-                }
+        toggleButton.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                accountNumberTextView.setText("Account Number: " + accountNumber);
+                accountBalanceTextView.setText("Balance: " + accountBalance);
+            } else {
+                accountNumberTextView.setText("Account Number: **** **** **** 5678");
+                accountBalanceTextView.setText("Balance: ****");
             }
         });
 
@@ -241,7 +235,6 @@ public class MainActivity extends AppCompatActivity {
         // Add the CardView to the root layout
         rootView.addView(accountBalanceCard);
     }
-
 
 
     private void setupGridLayout() {
@@ -274,6 +267,8 @@ public class MainActivity extends AppCompatActivity {
                 String background = module.getString("background");
                 int id = module.getInt("id");
 
+                //
+
                 // Inflate grid module item layout
                 View gridItemView = LayoutInflater.from(this).inflate(R.layout.item_grid_module, null);
 
@@ -302,6 +297,8 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (1 == id) {
                             startActivity(new Intent(MainActivity.this, FundTransferActivity.class));
+                        } else if (2 == id) {
+                            startActivity(new Intent(MainActivity.this, AccountActivity.class));
                         } else {
                             Toast.makeText(MainActivity.this, "" + title, Toast.LENGTH_SHORT).show();
                         }
@@ -427,8 +424,6 @@ public class MainActivity extends AppCompatActivity {
             throw new RuntimeException(e);
         }
     }
-
-
 
 
     private JSONObject loadJsonFromRaw(int resId) throws JSONException {

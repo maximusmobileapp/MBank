@@ -1,9 +1,121 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MPIN">
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Header -->
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set MPIN"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        style="@style/HeaderStyle" />
+
+    <TextView
+        android:id="@+id/pin_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Pin Code"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/header"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/pin_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/pin_prompt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/pin_digit_1"
+            style="@style/PinDigit" />
+
+        <TextView
+            android:id="@+id/pin_digit_2"
+            style="@style/PinDigit" />
+
+        <TextView
+            android:id="@+id/pin_digit_3"
+            style="@style/PinDigit" />
+
+        <TextView
+            android:id="@+id/pin_digit_4"
+            style="@style/PinDigit" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/confirm_pin_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm Pin Code"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/pin_display"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/pin_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/confirm_pin_prompt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/pin_confirm_1"
+            style="@style/PinDigit" />
+
+        <TextView
+            android:id="@+id/pin_confirm_2"
+            style="@style/PinDigit" />
+
+        <TextView
+            android:id="@+id/pin_confirm_3"
+            style="@style/PinDigit" />
+
+        <TextView
+            android:id="@+id/pin_confirm_4"
+            style="@style/PinDigit" />
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/pin_pad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:rowCount="4"
+        android:columnCount="3"
+        android:layout_below="@id/pin_confirm"
+        android:layout_marginTop="30dp"
+        android:padding="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp">
+
+        <!-- PIN pad buttons -->
+        <Button android:id="@+id/button1" style="@style/PinButton" android:text="1" />
+        <Button android:id="@+id/button2" style="@style/PinButton" android:text="2" />
+        <Button android:id="@+id/button3" style="@style/PinButton" android:text="3" />
+        <Button android:id="@+id/button4" style="@style/PinButton" android:text="4" />
+        <Button android:id="@+id/button5" style="@style/PinButton" android:text="5" />
+        <Button android:id="@+id/button6" style="@style/PinButton" android:text="6" />
+        <Button android:id="@+id/button7" style="@style/PinButton" android:text="7" />
+        <Button android:id="@+id/button8" style="@style/PinButton" android:text="8" />
+        <Button android:id="@+id/button9" style="@style/PinButton" android:text="9" />
+        <View android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1"/>
+        <Button android:id="@+id/button0" style="@style/PinButton" android:text="0" />
+        <Button android:id="@+id/button_delete" style="@style/PinButton" android:text="X" />
+    </GridLayout>
+
+</RelativeLayout>

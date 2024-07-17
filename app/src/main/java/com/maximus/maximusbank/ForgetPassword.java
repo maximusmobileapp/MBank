@@ -3,10 +3,7 @@ package com.maximus.maximusbank;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.text.InputFilter;
 import android.text.InputType;
-import android.util.Log;
-import android.util.Patterns;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,12 +16,10 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.facebook.shimmer.Shimmer;
 import com.facebook.shimmer.ShimmerFrameLayout;
+import com.maximus.maximusbank.activity.landing.OTPActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -174,7 +169,7 @@ public class ForgetPassword extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     if (validateFieldss()) {
-                        Intent intent = new Intent(ForgetPassword.this, OTP.class);
+                        Intent intent = new Intent(ForgetPassword.this, OTPActivity.class);
                         startActivity(intent);
                     } else {
                         Toast.makeText(ForgetPassword.this, "Please fill all details", Toast.LENGTH_SHORT).show();

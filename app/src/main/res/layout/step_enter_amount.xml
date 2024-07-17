@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edit_text_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Enter Amount" />
+
+    <Button
+        android:id="@+id/button_continue_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue" />
+</LinearLayout>
