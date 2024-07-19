@@ -88,8 +88,15 @@
             android:name=".ForgetPassword"
             android:exported="false" />
 
+
         <activity
             android:name=".activity.landing.SetMpin"
+            android:exported="true" />
+
+
+
+        <activity
+            android:name=".SetMpin"
             android:exported="true" />
 
         <activity
@@ -97,6 +104,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
