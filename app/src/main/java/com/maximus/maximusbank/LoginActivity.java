@@ -1,3 +1,4 @@
+/*
 package com.maximus.maximusbank;
 
 import androidx.appcompat.app.AlertDialog;
@@ -27,6 +28,8 @@ import android.widget.Toast;
 import com.facebook.shimmer.Shimmer;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.maximus.maximusbank.activity.landing.OTPActivity;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -181,7 +184,7 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             if (validateFields()) {
-                                Intent intent = new Intent(LoginActivity.this, OTP.class);
+                                Intent intent = new Intent(LoginActivity.this, OTPActivity.class);
                                 startActivity(intent);
                             } else {
                                 Toast.makeText(LoginActivity.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
@@ -379,3 +382,4 @@ public class LoginActivity extends AppCompatActivity {
         view.setPadding(16, 16, 16, 16);
     }
 }
+*/

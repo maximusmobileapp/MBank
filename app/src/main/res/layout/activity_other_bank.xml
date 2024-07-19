@@ -5,8 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="@color/white"
     tools:context=".OtherBankActivity">
+=======
+    android:background="?attr/colorSurface"
+    tools:context=".activity.fundTransfer.OtherBankActivity">
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,6 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+<<<<<<< HEAD
             <TextView
                 android:id="@+id/txtOFT"
                 android:layout_width="match_parent"
@@ -33,12 +39,22 @@
                 android:src="@drawable/back"
                 android:layout_marginTop="30dp"
                 android:layout_marginStart="20dp"/>
+=======
+            <include
+                android:id="@+id/headerLayout"
+                layout="@layout/common_header"
+                />
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_otherbank"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+<<<<<<< HEAD
                 android:layout_below="@id/txtOFT"
+=======
+                android:layout_below="@id/headerLayout"
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
                 android:layout_margin="16dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="4dp"
@@ -65,7 +81,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/txtacc"
+<<<<<<< HEAD
                             android:layout_margin="5dp"
+=======
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
                             android:entries="@array/spinner1" />
 
                     </RelativeLayout>
@@ -219,8 +242,14 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
+<<<<<<< HEAD
                             android:layout_weight="1"
                             android:backgroundTint="@color/colorPrimary"
+=======
+                            android:textColor="?attr/colorSurface"
+                            android:background="@drawable/button_background"
+                            android:layout_weight="1"
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
                             android:padding="15dp"
                             android:text="Continue" />
 
@@ -229,8 +258,14 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
+<<<<<<< HEAD
                             android:layout_weight="1"
                             android:backgroundTint="@color/colorPrimary"
+=======
+                            android:background="@drawable/button_background"
+                            android:layout_weight="1"
+                            android:textColor="?attr/colorSurface"
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
                             android:padding="15dp"
                             android:text="Add Beneficiary" />
 

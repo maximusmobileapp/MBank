@@ -1,4 +1,5 @@
-package com.maximus.maximusbank;
+/*
+package com.maximus.maximusbank.activity.landing;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
@@ -24,7 +25,7 @@ import androidx.core.content.ContextCompat;
 import com.facebook.shimmer.Shimmer;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
+import com.maximus.maximusbank.R;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -281,7 +282,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (validateFieldss()) {
-                    Intent intent = new Intent(RegisterActivity.this, OTP.class);
+                    Intent intent = new Intent(RegisterActivity.this, OTPActivity.class);
                     startActivity(intent);
                 } else {
                     Toast.makeText(RegisterActivity.this, "Please fill all details", Toast.LENGTH_SHORT).show();
@@ -330,4 +331,4 @@ public class RegisterActivity extends AppCompatActivity {
                 return InputType.TYPE_CLASS_TEXT;
         }
     }
-}
+}*/

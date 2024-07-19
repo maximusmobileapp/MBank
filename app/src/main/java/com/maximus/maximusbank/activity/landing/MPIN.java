@@ -1,4 +1,5 @@
-package com.maximus.maximusbank;
+/*
+package com.maximus.maximusbank.activity.landing;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
@@ -22,6 +23,10 @@ import androidx.core.content.ContextCompat;
 import com.facebook.shimmer.Shimmer;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import com.maximus.maximusbank.ForgetPassword;
+import com.maximus.maximusbank.R;
+import com.maximus.maximusbank.activity.DashboardActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -226,10 +231,10 @@ public class MPIN extends AppCompatActivity {
 
         shimmerFrameLayout.addView(buttonlogin);
         Shimmer shimmer = new Shimmer.AlphaHighlightBuilder()
-                .setDuration(1500) // Duration of shimmer animation
-                .setBaseAlpha(0.7f) // Alpha of the base color
-                .setHighlightAlpha(1f) // Alpha of the highlight color
-                .setDirection(Shimmer.Direction.LEFT_TO_RIGHT) // Animation direction
+                .setDuration(1500)
+                .setBaseAlpha(0.7f)
+                .setHighlightAlpha(1f)
+                .setDirection(Shimmer.Direction.LEFT_TO_RIGHT)
                 .build();
         shimmerFrameLayout.setShimmer(shimmer);
         buttonlogin.setOnClickListener(new View.OnClickListener() {
@@ -240,7 +245,11 @@ public class MPIN extends AppCompatActivity {
                 String previousPin = intent.getStringExtra("PIN");
                 if (!previousPin.equals(newPin)) {
                     mpin.setError("Enter Valid Pin");
-                } else {
+
+                if (validateFields()) {
+                    Toast.makeText(MPIN.this, "No Screen", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(MPIN.this, DashboardActivity.class));
+} else {
                     if (validateFields()) {
                         startActivity(new Intent(MPIN.this, MainActivity.class));
                     } else {
@@ -274,4 +283,4 @@ public class MPIN extends AppCompatActivity {
                 return InputType.TYPE_TEXT_VARIATION_PASSWORD;
         }
     }
-}
+}*/

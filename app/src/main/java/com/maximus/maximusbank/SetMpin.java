@@ -22,6 +22,7 @@ import androidx.core.content.ContextCompat;
 import com.facebook.shimmer.Shimmer;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.maximus.maximusbank.activity.landing.PasscodeActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -158,7 +159,7 @@ public class SetMpin extends AppCompatActivity {
                         public void onClick(View v) {
                             if (validateFields()) {
                                 String pin = newmpin.getText().toString();
-                                Intent intent = new Intent(SetMpin.this, MPIN.class);
+                                Intent intent = new Intent(SetMpin.this, PasscodeActivity.class);
                                 intent.putExtra("PIN", pin);
                                 startActivity(intent);
                             } else {
@@ -226,7 +227,7 @@ public class SetMpin extends AppCompatActivity {
             public void onClick(View v) {
                 if (validateFields()) {
                     String pin = newmpin.getText().toString();
-                    Intent intent = new Intent(SetMpin.this, MPIN.class);
+                    Intent intent = new Intent(SetMpin.this, PasscodeActivity.class);
                     intent.putExtra("PIN", pin);
                     startActivity(intent);
                 } else {

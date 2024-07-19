@@ -4,6 +4,7 @@
     android:id="@+id/card_view"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="?attr/colorSurface"
     android:layout_margin="8dp">
 
     <LinearLayout
@@ -25,7 +26,7 @@
             android:layout_height="wrap_content"
             android:text="Dashboard Item"
             android:textSize="16sp"
-            android:textColor="@android:color/black"
+
             android:layout_marginTop="8dp"/>
 
     </LinearLayout>

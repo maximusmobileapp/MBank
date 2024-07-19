@@ -1,3 +1,4 @@
+/*
 package com.maximus.maximusbank;
 
 import android.content.Intent;
@@ -9,7 +10,10 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< HEAD
 import android.widget.CompoundButton;
+=======
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -26,6 +30,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.maximus.maximusbank.Utils.Utils;
+import com.maximus.maximusbank.activity.AccountActivity;
 import com.maximus.maximusbank.adapter.TransactionsAdapter;
 
 import org.json.JSONArray;
@@ -62,20 +67,18 @@ public class MainActivity extends AppCompatActivity {
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT));
         rootView.setOrientation(LinearLayout.VERTICAL);
+        rootView.setBackgroundColor(Color.parseColor("#ffffff"));
 
-        // Set up the header
+        init();
+
         setupHeader();
 
-        // Set up the account balance card
         setupAccountBalanceCard();
 
-        // Set up the grid layout for modules
         setupGridLayout();
 
-        // Set up the recent transactions RecyclerView
         setupRecyclerView();
 
-        // Add root view to scroll view
         scrollView.addView(rootView);
 
         // Set content view to DrawerLayout
@@ -83,6 +86,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Add scroll view to DrawerLayout
         drawerLayout.addView(scrollView);
+    }
+
+    private void init(){
+
     }
 
     private void setupHeader() {
@@ -140,8 +147,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Open notification activity
-                /*Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
-                startActivity(intent);*/
+                */
+/*Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
+                startActivity(intent);*//*
+
                 Toast.makeText(MainActivity.this, "Notification icon clicked", Toast.LENGTH_SHORT).show();
             }
         });
@@ -211,18 +220,13 @@ public class MainActivity extends AppCompatActivity {
         toggleButton.setTextColor(Color.WHITE); // Set text color
 
         // ToggleButton listener to switch between showing actual and masked values
-        toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    // Show actual values
-                    accountNumberTextView.setText("Account Number: " + accountNumber);
-                    accountBalanceTextView.setText("Balance: " + accountBalance);
-                } else {
-                    // Show masked values (or alternative display)
-                    accountNumberTextView.setText("Account Number: **** **** **** 5678");
-                    accountBalanceTextView.setText("Balance: ****");
-                }
+        toggleButton.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                accountNumberTextView.setText("Account Number: " + accountNumber);
+                accountBalanceTextView.setText("Balance: " + accountBalance);
+            } else {
+                accountNumberTextView.setText("Account Number: **** **** **** 5678");
+                accountBalanceTextView.setText("Balance: ****");
             }
         });
 
@@ -238,7 +242,6 @@ public class MainActivity extends AppCompatActivity {
         // Add the CardView to the root layout
         rootView.addView(accountBalanceCard);
     }
-
 
 
     private void setupGridLayout() {
@@ -271,6 +274,8 @@ public class MainActivity extends AppCompatActivity {
                 String background = module.getString("background");
                 int id = module.getInt("id");
 
+                //
+
                 // Inflate grid module item layout
                 View gridItemView = LayoutInflater.from(this).inflate(R.layout.item_grid_module, null);
 
@@ -298,6 +303,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         if (1 == id) {
+<<<<<<< HEAD
                             startActivity(new Intent(MainActivity.this, FundTrans.class));
                         } else if (2 == id){
                             startActivity(new Intent(MainActivity.this, CardControlActivity.class));
@@ -305,6 +311,11 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(new Intent(MainActivity.this, TransactionHistory.class));
                         } else if (4 == id){
                             startActivity(new Intent(MainActivity.this, SpiltBill.class));
+=======
+                            startActivity(new Intent(MainActivity.this, FundTransferActivity.class));
+                        } else if (2 == id) {
+                            startActivity(new Intent(MainActivity.this, AccountActivity.class));
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
                         } else {
                             Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
                         }
@@ -430,6 +441,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
     private JSONObject loadJsonFromRaw(int resId) throws JSONException {
         try {
             InputStream inputStream = getResources().openRawResource(resId);
@@ -443,3 +458,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+*/

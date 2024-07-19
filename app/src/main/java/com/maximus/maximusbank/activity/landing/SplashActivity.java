@@ -1,4 +1,4 @@
-package com.maximus.maximusbank;
+package com.maximus.maximusbank.activity.landing;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -10,6 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.maximus.maximusbank.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,7 +35,7 @@ public class SplashActivity extends AppCompatActivity {
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
         layout.setGravity(Gravity.CENTER);
-        layout.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        layout.setBackgroundColor(getResources().getColor(R.color.primaryColor));
         setContentView(layout);
 
         try {
@@ -44,7 +46,7 @@ public class SplashActivity extends AppCompatActivity {
             inputStream.close();
             String jsonStr = new String(buffer, StandardCharsets.UTF_8);
 
-            getWindow().getDecorView().setBackgroundColor(getResources().getColor(R.color.colorPrimarfy));
+            getWindow().getDecorView().setBackgroundColor(getResources().getColor(R.color.primaryColor));
 
             JSONObject jsonObject = new JSONObject(jsonStr);
             JSONObject screen = jsonObject.getJSONObject("screen");

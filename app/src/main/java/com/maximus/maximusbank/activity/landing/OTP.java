@@ -1,4 +1,4 @@
-package com.maximus.maximusbank;
+package com.maximus.maximusbank.activity.landing;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -20,6 +20,7 @@ import androidx.core.content.ContextCompat;
 
 import com.facebook.shimmer.Shimmer;
 import com.facebook.shimmer.ShimmerFrameLayout;
+import com.maximus.maximusbank.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

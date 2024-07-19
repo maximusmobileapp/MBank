@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <color name="black">#FF000000</color>
     <color name="gray">#808080</color>
     <color name="lightgray">#BBBBBB</color>
@@ -16,4 +17,46 @@
     <color name="disable_thumb_grey"> #1c0000</color>
     <color name="enable_thumb_green"> #46bdbf</color>
 
+=======
+    <!-- Define night mode colors here -->
+   <!-- <color name="primaryColor">#F32855F5</color>
+    <color name="primaryVariantColor">#3700B3</color>
+    <color name="secondaryColor">#F32855F5</color>
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="surfaceColor">#FFFFFF</color>
+    <color name="textColor">#000000</color>
+    <color name="viewBackgroundLight">#EEEEEE</color>
+    <color name="viewBackgroundDark">#333333</color>-->
+
+
+   <!-- <color name="primaryDarkColor">#69686A</color>
+    <color name="primaryVariantDarkColor">#3700B3</color>
+    <color name="secondaryDarkColor">#FFFFFF</color>
+    <color name="backgroundDarkColor">#121212</color>
+    <color name="surfaceDarkColor">#121212</color>
+    <color name="textDarkColor">#FFFFFF</color>
+    <color name="viewBackgroundDarkLight">#333333</color>
+    <color name="viewBackgroundDarkColor">#EEEEEE</color>-->
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="primaryColor">#6200EE</color> <!-- Dark Purple -->
+    <color name="primaryVariantColor">#3700B3</color> <!-- Deep Purple -->
+    <color name="secondaryColor">#03DAC6</color> <!-- Teal -->
+    <color name="backgroundColor">#FFFFFF</color> <!-- White -->
+    <color name="surfaceColor">#FFFFFF</color> <!-- White -->
+    <color name="textColor">#000000</color> <!-- Black -->
+    <color name="viewBackgroundLight">#EEEEEE</color> <!-- Light Grey -->
+    <color name="viewBackgroundDark">#6200EE</color>
+
+    <color name="primaryDarkColor">#BB86FC</color> <!-- Lighter Purple -->
+    <color name="primaryVariantDarkColor">#3700B3</color> <!-- Deep Purple -->
+    <color name="secondaryDarkColor">#03DAC6</color> <!-- Teal -->
+    <color name="backgroundDarkColor">#121212</color> <!-- Almost Black -->
+    <color name="surfaceDarkColor">#121212</color> <!-- Almost Black -->
+    <color name="textDarkColor">#FFFFFF</color> <!-- White -->
+    <color name="viewBackgroundDarkLight">#333333</color> <!-- Dark Grey -->
+    <color name="viewBackgroundDarkColor">#03DAC6</color>
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
 </resources>

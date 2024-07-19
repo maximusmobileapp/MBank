@@ -1,7 +1,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+<<<<<<< HEAD
     android:layout_height="wrap_content">
 
+=======
+    android:layout_height="wrap_content"
+    android:background="?attr/colorSurface">
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
     <ImageView
         android:id="@+id/imgTrans"
         android:layout_width="40dp"

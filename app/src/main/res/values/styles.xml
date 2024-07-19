@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <style name="SCBSwitch" parent="Theme.AppCompat.Light">
 
         <!-- active thumb & track color (30% transparency) -->
@@ -19,4 +20,8 @@
         <item name="colorAccent">@color/black</item>
     </style>
 
+=======
+
+    <style name="Cut"></style>
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
 </resources>

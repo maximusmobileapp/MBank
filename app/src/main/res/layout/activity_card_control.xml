@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     xmlns:app="http://schemas.android.com/apk/res-auto"
+=======
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="@color/white"
     tools:context=".CardControlActivity">
 
@@ -42,10 +46,19 @@
         </LinearLayout>
 
     </RelativeLayout>
+=======
+    android:background="?attr/colorSurface"
+    tools:context=".activity.cardcontrol.CardControlActivity">
+
+    <include
+        android:id="@+id/headerLayout"
+        layout="@layout/common_header" />
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView1"
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="wrap_content"
         android:layout_below="@+id/relativeheader"
         android:layout_margin="10dp"
@@ -67,5 +80,23 @@
             android:text="Confirm" />
 
     </LinearLayout>
+=======
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnconfirm"
+        android:layout_below="@+id/headerLayout"
+        android:layout_margin="10dp" />
+
+
+    <Button
+        android:id="@+id/btnconfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_background"
+        android:text="Confirm"
+        android:textColor="?attr/colorSurface" />
+
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
 
 </RelativeLayout>

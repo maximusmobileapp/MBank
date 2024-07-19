@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white">
+=======
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorSurface">
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
 
     <TextView
         android:id="@+id/txtCardNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
+=======
+        android:textColor="?attr/colorOnSurface"
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
         android:padding="20dp"
         android:text="Card Number" />
 
@@ -19,6 +29,10 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
+<<<<<<< HEAD
+=======
+        android:textColor="?attr/colorOnSurface"
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
         android:paddingStart="20dp"
         android:text="Unblock" />
 
@@ -35,6 +49,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:padding="20dp"
+<<<<<<< HEAD
+=======
+            android:textColor="?attr/colorOnSurface"
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
             android:text="Card No : 72 XXXX XXX XX 62" />
 
         <Switch
@@ -42,8 +60,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
+<<<<<<< HEAD
             android:padding="20dp"
             android:theme="@style/SCBSwitch" />
+=======
+            android:padding="20dp" />
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
 
     </androidx.cardview.widget.CardView>
 
@@ -51,16 +73,26 @@
         android:id="@+id/cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_below="@+id/cardviewno"
         android:layout_margin="10dp"
         android:backgroundTint="@color/white"
         android:visibility="gone">
+=======
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/cardviewno">
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:orientation="vertical"
             android:padding="16dp">
+=======
+            android:orientation="vertical">
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -69,30 +101,59 @@
 
                 <TextView
                     android:id="@+id/txtChannel"
+<<<<<<< HEAD
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+=======
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/colorOnSurface"
+                    android:layout_marginStart="30dp"
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
                     android:text="Channel" />
 
                 <TextView
                     android:id="@+id/txtStatus"
+<<<<<<< HEAD
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+=======
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:nextFocusRight="@id/txtChannel"
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
                     android:text="Status" />
 
                 <TextView
                     android:id="@+id/txtPerDay"
+<<<<<<< HEAD
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+=======
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/colorOnSurface"
+                    android:layout_marginStart="30dp"
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
                     android:text="Per Day (Rs.)" />
 
                 <TextView
                     android:id="@+id/txtAvilAmu"
+<<<<<<< HEAD
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+=======
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/colorOnSurface"
+                    android:layout_marginStart="33dp"
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
                     android:text="Avail Amount" />
 
             </LinearLayout>
@@ -104,14 +165,23 @@
 
                 <TextView
                     android:id="@+id/txtATM"
+<<<<<<< HEAD
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_margin="10dp"
+=======
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/colorOnSurface"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="10dp"
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
                     android:text="ATM" />
 
                 <Switch
                     android:id="@+id/cardatm"
+<<<<<<< HEAD
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -135,6 +205,33 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_margin="10dp"
+=======
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="10dp" />
+
+                <EditText
+                    android:id="@+id/etATM"
+                    android:layout_width="65dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    android:enabled="false"
+                    android:textColor="?attr/colorOnSurface"
+                    android:background="@drawable/rounded_edittext_bg"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:hint="25000" />
+
+                <TextView
+                    android:id="@+id/txtAvail1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/colorOnSurface"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="10dp"
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
                     android:text="25000" />
 
 
@@ -148,14 +245,23 @@
 
                 <TextView
                     android:id="@+id/txtPOS"
+<<<<<<< HEAD
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_margin="10dp"
+=======
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:layout_marginTop="10dp"
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
                     android:text="POS" />
 
                 <Switch
                     android:id="@+id/cardpos"
+<<<<<<< HEAD
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -180,6 +286,34 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_margin="10dp"
+=======
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                   
+                    android:layout_marginTop="10dp" />
+
+                <EditText
+                    android:id="@+id/etPOS"
+                    android:layout_width="65dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    android:enabled="false"
+                    android:textColor="?attr/colorOnSurface"
+                    android:background="@drawable/rounded_edittext_bg"
+                    android:padding="5dp"
+                    android:inputType="number"
+                    android:hint="25000" />
+
+                <TextView
+                    android:id="@+id/txtAvail2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55dp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:layout_marginTop="10dp"
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
                     android:text="25000" />
 
             </LinearLayout>
@@ -191,14 +325,23 @@
 
                 <TextView
                     android:id="@+id/txtecom"
+<<<<<<< HEAD
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_margin="10dp"
+=======
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="?attr/colorOnSurface"
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
                     android:text="E-Com" />
 
                 <Switch
                     android:id="@+id/cardecom"
+<<<<<<< HEAD
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -223,6 +366,35 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_margin="10dp"
+=======
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:checked="false"
+                   
+                    android:layout_marginTop="10dp" />
+
+                <EditText
+                    android:id="@+id/etecom"
+                    android:layout_width="65dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    android:enabled="false"
+                    android:textColor="?attr/colorOnSurface"
+                    android:background="@drawable/rounded_edittext_bg"
+                    android:padding="5dp"
+                    android:inputType="number"
+                    android:hint="25000" />
+
+                <TextView
+                    android:id="@+id/txtAvail3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55dp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:layout_marginTop="10dp"
+>>>>>>> 22bc215b671b721939a4c6134686f133e576a542
                     android:text="25000" />
 
             </LinearLayout>
