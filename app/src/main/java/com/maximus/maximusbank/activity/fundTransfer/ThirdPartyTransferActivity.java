@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.maximus.maximusbank.MainActivity;
@@ -28,13 +29,14 @@ public class ThirdPartyTransferActivity extends AppCompatActivity {
     private Button proceedButton;
     private List<String> steps = Arrays.asList("Pay From", "Pay To", "Amount", "Remarks");
     private List<String> yourSpinnerData = Arrays.asList("Select from account no", "95551132115", "95512141151","9525454842"); // Add your spinner data
-
+    TextView headerTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third_party_transfer);
 
-
+        headerTextView = findViewById(R.id.headerTextView);
+        headerTextView.setText(R.string.third_party);
         recyclerView = findViewById(R.id.step_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

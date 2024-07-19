@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Theme.MyApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimary">@color/primaryDarkColor</item>
         <item name="colorPrimaryVariant">@color/primaryVariantDarkColor</item>
         <item name="colorOnPrimary">@color/textDarkColor</item>
-        <item name="colorSecondary">@color/secondaryDarkColor</item>
+        <item name="colorSecondary">@color/primaryDarkColor</item>
         <item name="colorOnSecondary">@color/white</item>
         <item name="android:statusBarColor" tools:targetApi="l">@android:color/transparent</item>
         <item name="android:windowBackground">@color/backgroundDarkColor</item>
@@ -16,28 +16,28 @@
         <item name="cornerSize">50%</item>
     </style>
 
-    <style name="PinButton">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_rowWeight">1</item>
-        <item name="android:layout_columnWeight">1</item>
-        <item name="android:layout_margin">8dp</item>
-        <item name="android:backgroundTint">?attr/colorPrimary</item>
-        <item name="android:background">@drawable/pin_button_background</item>
-        <item name="android:textColor">?attr/colorSurface</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:elevation">4dp</item>
-    </style>
-
     <style name="PinDigit">
-        <item name="android:layout_width">48dp</item>
-        <item name="android:layout_height">48dp</item>
-        <item name="android:layout_margin">8dp</item>
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_margin">4dp</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/edit_text_border</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">?attr/colorOnSurface</item>
     </style>
+
+    <style name="PinButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textColor">?attr/colorSurface</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+
 
     <style name="HeaderStyle">
         <item name="android:textSize">28sp</item>

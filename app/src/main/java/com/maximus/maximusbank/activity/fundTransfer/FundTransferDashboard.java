@@ -33,6 +33,7 @@ public class FundTransferDashboard extends AppCompatActivity {
     private TextView titleView,txtWithin,txtOther,txtSelf;
     private CardView card1,card2,card3;
     private ImageView imgvector;
+    TextView headerTextView;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -40,6 +41,8 @@ public class FundTransferDashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fund_transfer_dashboard);
 
+         headerTextView = findViewById(R.id.headerTextView);
+         headerTextView.setText(R.string.fund_transfer);
         txtWithin = findViewById(R.id.txtwithin);
         txtOther = findViewById(R.id.txtother);
         txtSelf = findViewById(R.id.txtself);

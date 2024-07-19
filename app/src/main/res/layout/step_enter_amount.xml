@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="?attr/colorSurface"
     android:orientation="vertical">
 
     <TextView
@@ -21,5 +22,7 @@
         android:id="@+id/button_continue_amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:textColor="?attr/colorSurface"
         android:text="Continue" />
 </LinearLayout>

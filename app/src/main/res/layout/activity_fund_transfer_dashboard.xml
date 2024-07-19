@@ -5,14 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="?attr/colorSurface"
     tools:context=".activity.fundTransfer.FundTransferDashboard">
 
     <include
         android:id="@+id/headerLayout"
         layout="@layout/common_header"
          />
-
 
 
     <GridLayout
@@ -47,6 +46,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="60dp"
+                    app:tint="?attr/colorPrimary"
                     android:src="@drawable/within" />
 
                 <TextView
@@ -82,6 +82,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="60dp"
+                    app:tint="?attr/colorPrimary"
                     android:src="@drawable/other" />
 
                 <TextView
@@ -117,6 +118,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="60dp"
+                    app:tint="?attr/colorPrimary"
                     android:src="@drawable/selftransfer" />
 
                 <TextView

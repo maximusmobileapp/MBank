@@ -1,15 +1,12 @@
 package com.maximus.maximusbank.activity.fundTransfer;
 
 import android.annotation.SuppressLint;
-import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,15 +17,10 @@ import com.maximus.maximusbank.R;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.InputStream;
-
 public class OtherBankActivity extends AppCompatActivity {
 
-    private ImageView imgvector;
-
-    private TextView txtOFT,txtacc,txtavailblce,txtBN,txtaccno,txtIFSC,txtamount,txtremark;
-
-    private Button btncon,btnaddben;
+    private Button btncon, btnaddben;
+    TextView headerTextView;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -36,18 +28,10 @@ public class OtherBankActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_other_bank);
 
-
-        txtacc = findViewById(R.id.txtacc);
-        txtavailblce = findViewById(R.id.txtavailblce);
-        txtBN = findViewById(R.id.txtBN);
-        txtaccno = findViewById(R.id.txtaccno);
-        txtIFSC = findViewById(R.id.txtIFSC);
-        txtamount = findViewById(R.id.txtamount);
-        txtremark = findViewById(R.id.txtremark);
+        headerTextView = findViewById(R.id.headerTextView);
+        headerTextView.setText(R.string.other_bank);
         btncon = findViewById(R.id.btncon);
         btnaddben = findViewById(R.id.btnaddben);
-
-
 
         btncon.setOnClickListener(new View.OnClickListener() {
             @Override
