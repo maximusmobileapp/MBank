@@ -1,4 +1,4 @@
-package com.maximus.maximusbank.model;
+package com.maximus.maximusbank.Model;
 
 public class RecentTransactionModel {
 

@@ -26,11 +26,6 @@
         <activity
             android:name=".SpiltBill"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".TransactionHistory"
@@ -75,14 +70,11 @@
             android:parentActivityName=".activity.DashboardActivity" />
         <activity
             android:name=".FundTransferActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:exported="false"/>
         <activity
             android:name=".activity.landing.OTP"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+
         <activity
             android:name=".activity.cardcontrol.CardControlActivity"
             android:exported="false" />
@@ -95,15 +87,11 @@
         <activity
             android:name=".ForgetPassword"
             android:exported="false" />
-        <activity
-            android:name=".activity.landing.MPIN"
-            android:exported="false" />
+
         <activity
             android:name=".activity.landing.SetMpin"
             android:exported="true" />
-        <activity
-            android:name=".activity.landing.RegisterActivity"
-            android:exported="false" />
+
         <activity
             android:name=".activity.landing.SplashActivity"
             android:exported="true">

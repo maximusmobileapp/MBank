@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">MaximusBank</string>
-<<<<<<< HEAD
-=======
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home">Home</string>
@@ -35,7 +34,6 @@
         <item>95511154451</item>
         <item>95255151515</item>
     </string-array>
->>>>>>> 22bc215b671b721939a4c6134686f133e576a542
 
     <array name="spinner1">
         <item name="view_only">Please select account</item>
@@ -44,12 +42,10 @@
     <array name="spinner2">
         <item name="view_only">Select benef name</item>
     </array>
-<<<<<<< HEAD
 
     <string name="Rs">Up to \u20B9 200</string>
     <string name="Rs1"> \u20B9200 - \u20B9500 </string>
     <string name="Rs2"> \u20B9500 - \u20B92,000 </string>
     <string name="Rs3"> Above \u20B92,000 </string>
-=======
->>>>>>> 22bc215b671b721939a4c6134686f133e576a542
+
 </resources>

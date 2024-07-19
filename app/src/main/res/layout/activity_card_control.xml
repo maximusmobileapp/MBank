@@ -1,86 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-<<<<<<< HEAD
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-=======
->>>>>>> 22bc215b671b721939a4c6134686f133e576a542
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-    android:background="@color/white"
-    tools:context=".CardControlActivity">
-
-    <RelativeLayout
-        android:id="@+id/relativeheader"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/semicircle">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/imgvector"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/back" />
-
-            <TextView
-                android:id="@+id/headerText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:padding="30dp"
-                android:text="Card Control" />
-
-        </LinearLayout>
-
-    </RelativeLayout>
-=======
     android:background="?attr/colorSurface"
     tools:context=".activity.cardcontrol.CardControlActivity">
 
     <include
         android:id="@+id/headerLayout"
         layout="@layout/common_header" />
->>>>>>> 22bc215b671b721939a4c6134686f133e576a542
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView1"
         android:layout_width="match_parent"
-<<<<<<< HEAD
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/relativeheader"
-        android:layout_margin="10dp"
-        android:paddingBottom="10dp" />
-
-    <LinearLayout
-        android:id="@+id/linearbtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnconfirm"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:text="Confirm" />
-
-    </LinearLayout>
-=======
         android:layout_height="match_parent"
         android:layout_above="@+id/btnconfirm"
         android:layout_below="@+id/headerLayout"
@@ -97,6 +30,5 @@
         android:text="Confirm"
         android:textColor="?attr/colorSurface" />
 
->>>>>>> 22bc215b671b721939a4c6134686f133e576a542
 
 </RelativeLayout>

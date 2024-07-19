@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.maximus.maximusbank.R;
-import com.maximus.maximusbank.model.RecentTransactionModel;
+import com.maximus.maximusbank.Model.RecentTransactionModel;
 import java.util.List;
 
 public class RecentTransactionAdapter extends RecyclerView.Adapter<RecentTransactionAdapter.ViewHolder> {

@@ -5,12 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-    tools:context=".SelfTransferActivity">
-=======
     android:background="?attr/colorSurface"
     tools:context=".activity.fundTransfer.SelfTransferActivity">
->>>>>>> 22bc215b671b721939a4c6134686f133e576a542
 
     <ScrollView
         android:layout_width="match_parent"
@@ -21,39 +17,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-<<<<<<< HEAD
-            <TextView
-                android:id="@+id/textself"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="30dp"
-                android:gravity="center"
-                android:background="@drawable/semicircle"
-                android:text="Self Transfer" />
-
-            <ImageView
-                android:id="@+id/imgvector"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/back"
-                android:layout_marginTop="30dp"
-                android:layout_marginStart="20dp"/>
-=======
             <include
                 android:id="@+id/headerLayout"
                 layout="@layout/common_header"
                 />
->>>>>>> 22bc215b671b721939a4c6134686f133e576a542
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-<<<<<<< HEAD
-                android:layout_below="@id/textself"
-=======
                 android:layout_below="@id/headerLayout"
->>>>>>> 22bc215b671b721939a4c6134686f133e576a542
                 android:layout_margin="16dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="4dp"
@@ -192,12 +165,8 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:padding="15dp"
-<<<<<<< HEAD
-                            android:backgroundTint="@color/colorPrimary"
-=======
                             android:background="@drawable/button_background"
                             android:textColor="?attr/colorSurface"
->>>>>>> 22bc215b671b721939a4c6134686f133e576a542
                             android:text="Continue" />
 
                     </LinearLayout>

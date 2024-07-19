@@ -1,38 +1,13 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-=======
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
->>>>>>> 22bc215b671b721939a4c6134686f133e576a542
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-<<<<<<< HEAD
-    android:gravity="bottom"
-    tools:context=".LoginActivity">
-=======
-    android:background="?attr/colorSurface"
-    tools:context=".MainActivity">
->>>>>>> 22bc215b671b721939a4c6134686f133e576a542
+    android:background="?attr/colorSurface">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-<<<<<<< HEAD
-        android:layout_height="75dp"
-        android:background="@color/white"
-        app:itemTextColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu_navigation" />
-
-</RelativeLayout>
-=======
         android:layout_height="match_parent"
         android:orientation="vertical" />
 </LinearLayout>
->>>>>>> 22bc215b671b721939a4c6134686f133e576a542

@@ -41,7 +41,6 @@ public class SelfTransferActivity extends AppCompatActivity {
         setContentView(R.layout.activity_self_transfer);
 
         imgvector = findViewById(R.id.imgvector);
-        textself = findViewById(R.id.textself);
         textAccount = findViewById(R.id.textAccount);
         txtavailblce = findViewById(R.id.txtavailblce);
         txtaccount = findViewById(R.id.txtaccount);
@@ -67,7 +66,7 @@ public class SelfTransferActivity extends AppCompatActivity {
             JSONObject screenObject = jsonObject.getJSONObject("screen");
             JSONArray components = screenObject.getJSONArray("components");
 
-            TextView[] textViews = new TextView[] { textself,textAccount,txtavailblce,txtaccount,txtamount,txtremark };
+            TextView[] textViews = new TextView[] { textAccount,txtavailblce,txtaccount,txtamount,txtremark };
 
             EditText[] editTexts = new EditText[] {};
 

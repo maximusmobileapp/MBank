@@ -13,7 +13,6 @@ import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,15 +20,16 @@ import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.navigation.NavigationView;
+import com.maximus.maximusbank.Model.GridModel;
 import com.maximus.maximusbank.R;
+import com.maximus.maximusbank.TransactionHistory;
 import com.maximus.maximusbank.Utils.ExpandableHeightGridView;
 import com.maximus.maximusbank.activity.cardcontrol.CardControlActivity;
 import com.maximus.maximusbank.activity.fundTransfer.FundTransferDashboard;
-import com.maximus.maximusbank.activity.fundTransfer.ThirdPartyTransferActivity;
+
 import com.maximus.maximusbank.adapter.GridAdapter;
 import com.maximus.maximusbank.adapter.RecentTransactionAdapter;
-import com.maximus.maximusbank.model.GridModel;
-import com.maximus.maximusbank.model.RecentTransactionModel;
+import com.maximus.maximusbank.Model.RecentTransactionModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -159,7 +159,7 @@ public class DashboardActivity extends AppCompatActivity {
                 // Navigate to Card Control activity or perform desired action
                 break;
             case "Recent Transaction":
-                Toast.makeText(this, "Recent Transaction Clicked", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, TransactionHistory.class));
                 // Navigate to Recent Transaction activity or perform desired action
                 break;
             case "Loan":

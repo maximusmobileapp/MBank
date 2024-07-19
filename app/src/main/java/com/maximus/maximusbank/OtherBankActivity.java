@@ -28,7 +28,7 @@ public class OtherBankActivity extends AppCompatActivity {
 
     private ImageView imgvector;
 
-    private TextView txtOFT,txtacc,txtavailblce,txtBN,txtaccno,txtIFSC,txtamount,txtremark;
+    private TextView txtacc,txtavailblce,txtBN,txtaccno,txtIFSC,txtamount,txtremark;
 
     private Button btncon,btnaddben;
 
@@ -39,7 +39,6 @@ public class OtherBankActivity extends AppCompatActivity {
         setContentView(R.layout.activity_other_bank);
 
         imgvector = findViewById(R.id.imgvector);
-        txtOFT = findViewById(R.id.txtOFT);
         txtacc = findViewById(R.id.txtacc);
         txtavailblce = findViewById(R.id.txtavailblce);
         txtBN = findViewById(R.id.txtBN);
@@ -63,7 +62,7 @@ public class OtherBankActivity extends AppCompatActivity {
             JSONObject screenObject = jsonObject.getJSONObject("screen");
             JSONArray components = screenObject.getJSONArray("components");
 
-            TextView[] textViews = new TextView[] { txtOFT,txtacc,txtavailblce,txtBN,txtaccno, txtIFSC,txtamount,txtremark };
+            TextView[] textViews = new TextView[] { txtacc,txtavailblce,txtBN,txtaccno, txtIFSC,txtamount,txtremark };
 
             EditText[] editTexts = new EditText[] {};
 

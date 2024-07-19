@@ -10,8 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.maximus.maximusbank.Model.GridModel;
 import com.maximus.maximusbank.R;
-import com.maximus.maximusbank.model.GridModel;
 
 import java.util.ArrayList;
 
