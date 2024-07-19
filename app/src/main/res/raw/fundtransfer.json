@@ -1,0 +1,18 @@
+{
+  "screen": {
+    "title": "Within Bank",
+    "components": [
+      {
+        "type": "text",
+        "value": "Within Bank",
+        "style": "header",
+        "textColor": "#000000",
+        "textStyle": "bold",
+        "hint": "",
+        "input_type": "",
+        "borderColor": "",
+        "action": ""
+      }
+    ]
+  }
+}

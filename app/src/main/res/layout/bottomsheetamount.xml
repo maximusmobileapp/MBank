@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/btmamount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount"
+            android:layout_marginStart="30dp"
+            android:textSize="15dp"/>
+
+        <ImageButton
+            android:id="@+id/btmcloseamount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btmamount"
+            android:src="@drawable/close"
+            android:background="@color/transparent"
+            android:layout_marginStart="290dp" />
+
+        <CheckBox
+            android:id="@+id/btmruppee1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btmamount"
+            android:text="@string/Rs"
+            android:textSize="15dp"
+            android:layout_marginEnd="20dp"
+            android:button="@null"
+            android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="31dp" />
+
+        <CheckBox
+            android:id="@+id/btmruppee2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btmruppee1"
+            android:text="@string/Rs1"
+            android:textSize="15dp"
+            android:layout_marginEnd="20dp"
+            android:button="@null"
+            android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp" />
+
+        <CheckBox
+            android:id="@+id/btmruppee3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btmruppee2"
+            android:text="@string/Rs2"
+            android:textSize="15dp"
+            android:layout_marginEnd="20dp"
+            android:button="@null"
+            android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp" />
+
+        <CheckBox
+            android:id="@+id/btmruppee4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btmruppee3"
+            android:text="@string/Rs3"
+            android:textSize="15dp"
+            android:layout_marginEnd="20dp"
+            android:button="@null"
+            android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:id="@+id/btmclear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear all"
+            android:background="@color/transparent"
+            android:textColor="@color/black"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/btmruppee4" />
+
+        <Button
+            android:id="@+id/btmapply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_toRightOf="@+id/btmclear"
+            android:layout_below="@+id/btmruppee4"/>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

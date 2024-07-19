@@ -19,6 +19,7 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -132,9 +133,30 @@ public class ForgetPassword extends AppCompatActivity {
                 }
 
                 else if ("buttonforget".equals(type)){
-                    View buttonView = createButton(component);
-                    buttonView.setPadding(20,20,20,30);
-                    innerLayout.addView(buttonView);
+//                    View buttonView = createButton(component);
+                    Button button = new Button(this);
+                    button.setPadding(20,20,20,30);
+                    LinearLayout.LayoutParams paramss = new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            LinearLayout.LayoutParams.WRAP_CONTENT);
+                    paramss.setMargins(50, 50, 50, 50);
+                    button.setLayoutParams(paramss);
+                    button.setText(component.getString("text"));
+                    button.setTextColor(Color.parseColor(component.getString("textColor")));
+                    button.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
+                    button.setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.rounded_button_background));
+                    button.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if (validateFieldss()) {
+                                Intent intent = new Intent(ForgetPassword.this, OTP.class);
+                                startActivity(intent);
+                            } else {
+                                Toast.makeText(ForgetPassword.this, "Please fill all details", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                    innerLayout.addView(button);
                 }
             }
             //This will show the complete view of page

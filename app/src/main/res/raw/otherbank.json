@@ -1,0 +1,131 @@
+{
+  "screen": {
+    "title": "Fund Transfer",
+    "components": [
+      {
+        "text": "Other Fund Transfer",
+        "textColor": "#FFFFFF",
+        "textSize": 25,
+        "textStyle": "bold",
+        "fontStyle": "Baskervville SC"
+      },
+      {
+        "text": "From Account",
+        "textColor": "#333333",
+        "textSize": 15,
+        "textStyle": "bold",
+        "fontStyle": ""
+      },
+      {
+        "Spinner": "SpinnerFromAcc",
+        "textColor": "#333333",
+        "textSize" : 0,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "text": "Add Beneficary",
+        "textColor": "#333333",
+        "textSize": 15,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "Spinner": "SpinnerAddBenf",
+        "textColor": "#333333",
+        "textSize" : 0,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "text": "Bank Name",
+        "textColor": "#333333",
+        "textSize": 15,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "Spinner": "SpinnerBank",
+        "textColor": "#333333",
+        "textSize" : 0,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "text": "Enter Account Number",
+        "textColor": "#333333",
+        "textSize": 15,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "Spinner": "SpinnerAccNo",
+        "textColor": "#333333",
+        "textSize" : 0,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "text": "IFSC",
+        "textColor": "#333333",
+        "textSize": 15,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "EditText": "EtIFSC",
+        "hint": "",
+        "textColor": "#333333",
+        "textSize": 0,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "text": "Amount",
+        "textColor": "#333333",
+        "textSize": 15,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "EditText": "EtAmount",
+        "hint": "",
+        "textColor": "#333333",
+        "textSize": 0,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "text": "Remark",
+        "textColor": "#333333",
+        "textSize": 15,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "EditText": "Etremark",
+        "hint": "Enter remark",
+        "textColor": "#333333",
+        "textSize": 0,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "type": "Button",
+        "text": "",
+        "action": "",
+        "hint" : "",
+        "textSize": 10,
+        "textColor": "#000011"
+      },
+      {
+        "type": "Button",
+        "text": "",
+        "action": "",
+        "hint" : "",
+        "textSize": 10,
+        "textColor": "#000000"
+      }
+    ]
+  }
+}

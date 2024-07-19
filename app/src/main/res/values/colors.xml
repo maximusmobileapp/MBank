@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="gray">#808080</color>
+    <color name="lightgray">#BBBBBB</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="colorPrimary"> #712FB8 </color>
+    <color name="colorPrimary">#408bff</color>
+    <color name="lightblue">#95B8EF</color>
     <color name="colorPrimarfy">#3F51B5</color>
+    <color name="colorPrimaryDark">#408bff</color>
+    <color name="buttonPrimaryColor">#408bff</color>
+    <color name="transparent">#00FFFFFF</color>
+
+    <!--Switch Colors-->
+    <color name="disable_forground_grey">#42221f</color>
+    <color name="disable_thumb_grey"> #1c0000</color>
+    <color name="enable_thumb_green"> #46bdbf</color>
+
 </resources>

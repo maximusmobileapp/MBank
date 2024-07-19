@@ -1,6 +1,7 @@
 package com.maximus.maximusbank;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.InputFilter;
@@ -12,14 +13,17 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 
 import com.facebook.shimmer.Shimmer;
 import com.facebook.shimmer.ShimmerFrameLayout;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -40,15 +44,22 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        LinearLayout rootlayout = new LinearLayout(this);
-        rootlayout.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.MATCH_PARENT
-        ));
-        rootlayout.setOrientation(LinearLayout.VERTICAL);
-        rootlayout.setGravity(Gravity.CENTER);
-        rootlayout.setBackgroundColor(Color.WHITE);
-        rootlayout.setPadding(32, 32, 32, 32);
+        RelativeLayout rootLayout = new RelativeLayout(this);
+        rootLayout.setLayoutParams(new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.MATCH_PARENT,
+                RelativeLayout.LayoutParams.MATCH_PARENT));
+        rootLayout.setBackgroundColor(Color.WHITE);
+        rootLayout.setPadding(32, 32, 32, 32);
+
+        LinearLayout centeredLayout = new LinearLayout(this);
+        RelativeLayout.LayoutParams centeredLayoutParams = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.MATCH_PARENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT);
+        centeredLayoutParams.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
+        centeredLayout.setLayoutParams(centeredLayoutParams);
+        centeredLayout.setOrientation(LinearLayout.VERTICAL);
+        centeredLayout.setGravity(Gravity.CENTER);
+        centeredLayout.setBackgroundColor(Color.WHITE);
 
         CardView cardView = new CardView(this);
         LinearLayout.LayoutParams cardViewParams = new LinearLayout.LayoutParams(
@@ -61,13 +72,12 @@ public class RegisterActivity extends AppCompatActivity {
         cardView.setCardBackgroundColor(Color.WHITE);
         cardView.setCardElevation(16.0f);
         cardView.setRadius(24.0f);
-        rootlayout.addView(cardView);
+        centeredLayout.addView(cardView);
 
         LinearLayout innerLayout = new LinearLayout(this);
         innerLayout.setLayoutParams(new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.MATCH_PARENT
-        ));
+                LinearLayout.LayoutParams.MATCH_PARENT));
         innerLayout.setOrientation(LinearLayout.VERTICAL);
         innerLayout.setGravity(Gravity.CENTER);
         cardView.addView(innerLayout);
@@ -122,22 +132,6 @@ public class RegisterActivity extends AppCompatActivity {
                     innerLayout.addView(text_email);
                 }
 
-               /* else if ("text_pass".equals(type)){
-                    TextView text_pass = new TextView(this);
-                    text_pass.setText(component.getString("value"));
-                    text_pass.setPadding(30,30,30,30);
-                    text_pass.setTextColor(Color.parseColor(component.getString("textColor")));
-                    innerLayout.addView(text_pass);
-                }*/
-
-               /* else if ("text_confirmpass".equals(type)) {
-                    TextView text_confirmpass = new TextView(this);
-                    text_confirmpass.setText(component.getString("value"));
-                    text_confirmpass.setPadding(30,30,30,30);
-                    text_confirmpass.setTextColor(Color.parseColor(component.getString("textColor")));
-                    innerLayout.addView(text_confirmpass);
-                }*/
-
                 else if ("edit_text".equals(type)) {
                     EditText editText = new EditText(this);
                     editText.setHint(component.getString("hint"));
@@ -160,36 +154,6 @@ public class RegisterActivity extends AppCompatActivity {
                         emailet = editText;
                     }
                 }
-/*
-                else if ("editpass".equals(type)) {
-                    EditText editText = new EditText(this);
-                    editText.setHint(component.getString("hint"));
-                    editText.setTextColor(Color.parseColor(component.getString("textColor")));
-                    InputFilter[] filters = new InputFilter[] { new InputFilter.LengthFilter(component.getInt("max_length")) };
-                    editText.setFilters(filters);
-                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                            LinearLayout.LayoutParams.MATCH_PARENT,
-                            LinearLayout.LayoutParams.WRAP_CONTENT);
-                    params.setMargins(30, 0, 30, 0);
-                    editText.setLayoutParams(params);
-                    editText.setInputType(getInputType(component.getString("input_type")));
-                    applyBorder(editText);
-                    innerLayout.addView(editText);
-                    viewsToFocus.add(editText);
-
-                    if ("Enter Name".equals(component.getString("hint"))) {
-                        namet = editText;
-                    } else if ("Enter Mobile No.".equals(component.getString("hint"))) {
-                        mobilet = editText;
-                    } else if ("Enter Email".equals(component.getString("hint"))) {
-                        emailet = editText;
-                    } else if ("Enter Password".equals(component.getString("hint"))) {
-                        passet = editText;
-                    } else if ("Enter Confirm Password".equals(component.getString("hint"))) {
-                        confirmpasset = editText;
-                    }
-                }
-*/
 
                 else if ("editmobile".equals(type)) {
                     EditText editText = new EditText(this);
@@ -216,41 +180,30 @@ public class RegisterActivity extends AppCompatActivity {
                     }
                 }
 
-/*
-                else if ("editconf".equals(type)) {
-                    EditText editText = new EditText(this);
-                    editText.setHint(component.getString("hint"));
-                    editText.setTextColor(Color.parseColor(component.getString("textColor")));
-                    InputFilter[] filters = new InputFilter[] { new InputFilter.LengthFilter(component.getInt("max_length")) };
-                    editText.setFilters(filters);
-                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                else if ("buttonregister".equals(type)){
+//                    View buttonView = createButton(component);
+                    Button button = new Button(this);
+                    button.setPadding(20,20,20,30);
+                    LinearLayout.LayoutParams paramss = new LinearLayout.LayoutParams(
                             LinearLayout.LayoutParams.MATCH_PARENT,
                             LinearLayout.LayoutParams.WRAP_CONTENT);
-                    params.setMargins(30, 0, 30, 0);
-                    editText.setLayoutParams(params);
-                    editText.setInputType(getInputType(component.getString("input_type")));
-                    applyBorder(editText);
-                    innerLayout.addView(editText);
-                    viewsToFocus.add(editText);
-
-                    if ("Enter Name".equals(component.getString("hint"))) {
-                        namet = editText;
-                    } else if ("Enter Mobile No.".equals(component.getString("hint"))) {
-                        mobilet = editText;
-                    } else if ("Enter Email".equals(component.getString("hint"))) {
-                        emailet = editText;
-                    } else if ("Enter Password".equals(component.getString("hint"))) {
-                        passet = editText;
-                    } else if ("Enter Confirm Password".equals(component.getString("hint"))) {
-                        confirmpasset = editText;
-                    }
-                }
-*/
-
-                else if ("buttonregister".equals(type)){
-                    View buttonView = createButton(component);
-                    buttonView.setPadding(20,20,20,30);
-                    innerLayout.addView(buttonView);
+                    paramss.setMargins(50, 50, 50, 50);
+                    button.setLayoutParams(paramss);
+                    button.setText(component.getString("text"));
+                    button.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
+                    button.setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.rounded_button_background));
+                    button.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if (validateFieldss()) {
+                                Intent intent = new Intent(RegisterActivity.this, OTP.class);
+                                startActivity(intent);
+                            } else {
+                                Toast.makeText(RegisterActivity.this, "Please fill all details", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                    innerLayout.addView(button);
                 }
 
                 else if ("login_text".equals(type)){
@@ -271,8 +224,27 @@ public class RegisterActivity extends AppCompatActivity {
                     innerLayout.addView(logintextView);
                 }
             }
+
+            rootLayout.addView(centeredLayout);
+
+            // Footer layout
+            RelativeLayout footerLayout = new RelativeLayout(this);
+            RelativeLayout.LayoutParams footerLayoutParams = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.MATCH_PARENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT);
+            footerLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+            footerLayout.setLayoutParams(footerLayoutParams);
+
+            BottomNavigationView bottomNavigationView = new BottomNavigationView(this);
+            bottomNavigationView.inflateMenu(R.menu.menu_navigation);
+            bottomNavigationView.setItemTextColor(ColorStateList.valueOf(Color.BLACK));
+            bottomNavigationView.setBackgroundColor(Color.WHITE);
+            footerLayout.addView(bottomNavigationView);
+
+            rootLayout.addView(footerLayout);
+
             //This will show the complete view of page
-            setContentView(rootlayout);
+            setContentView(rootLayout);
 
         } catch (IOException | JSONException e) {
             e.printStackTrace();

@@ -3,23 +3,30 @@ package com.maximus.maximusbank;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
+
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.text.InputType;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.facebook.shimmer.Shimmer;
 import com.facebook.shimmer.ShimmerFrameLayout;
-
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -30,35 +37,44 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
+
     public Button button;
-    private EditText AccnoEditText,mobEditText;
+    private EditText AccnoEditText, mobEditText;
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        LinearLayout rootLayout = new LinearLayout(this);
-        rootLayout.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.MATCH_PARENT));
-        rootLayout.setOrientation(LinearLayout.VERTICAL);
-        rootLayout.setGravity(Gravity.CENTER);
+        RelativeLayout rootLayout = new RelativeLayout(this);
+        rootLayout.setLayoutParams(new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.MATCH_PARENT,
+                RelativeLayout.LayoutParams.MATCH_PARENT));
         rootLayout.setBackgroundColor(Color.WHITE);
         rootLayout.setPadding(32, 32, 32, 32);
+
+        LinearLayout centeredLayout = new LinearLayout(this);
+        RelativeLayout.LayoutParams centeredLayoutParams = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.MATCH_PARENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT);
+        centeredLayoutParams.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
+        centeredLayout.setLayoutParams(centeredLayoutParams);
+        centeredLayout.setOrientation(LinearLayout.VERTICAL);
+        centeredLayout.setGravity(Gravity.CENTER);
+        centeredLayout.setBackgroundColor(Color.WHITE);
 
         CardView cardView = new CardView(this);
         LinearLayout.LayoutParams cardViewParams = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT);
-
         cardView.setPadding(8, 8, 8, 8);
         cardViewParams.setMargins(8, 8, 8, 8);
         cardView.setLayoutParams(cardViewParams);
         cardView.setCardBackgroundColor(Color.WHITE);
         cardView.setCardElevation(16.0f);
         cardView.setRadius(24.0f);
-        rootLayout.addView(cardView);
+        centeredLayout.addView(cardView);
 
         LinearLayout innerLayout = new LinearLayout(this);
         innerLayout.setLayoutParams(new LinearLayout.LayoutParams(
@@ -83,6 +99,7 @@ public class LoginActivity extends AppCompatActivity {
             List<View> viewsToFocus = new ArrayList<>();
             for (int i = 0; i < components.length(); i++) {
                 JSONObject component = components.getJSONObject(i);
+
                 String type = component.getString("type");
 
                 if ("text".equals(type)) {
@@ -95,6 +112,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
                     innerLayout.addView(textView);
                 }
+
                 else if ("edittext_acc".equals(type)) {
                     EditText editText = new EditText(this);
                     editText.setHint(component.getString("hint"));
@@ -115,52 +133,69 @@ public class LoginActivity extends AppCompatActivity {
                         mobEditText = editText;
                     }
                 }
-                else if ("edittext_mob".equals(type)) {
-                    EditText editText = new EditText(this);
-                    editText.setHint(component.getString("hint"));
-                    editText.setTextColor(Color.parseColor(component.getString("textColor")));
-                    InputFilter[] filters = new InputFilter[] { new InputFilter.LengthFilter(component.getInt("max_length")) };
-                    editText.setFilters(filters);
-                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                            LinearLayout.LayoutParams.MATCH_PARENT,
-                            LinearLayout.LayoutParams.WRAP_CONTENT);
-                    params.setMargins(30, 0, 30, 0);
-                    editText.setLayoutParams(params);
-                    editText.setInputType(getInputType(component.getString("input_type")));
-                    applyBorder(editText);
-                    innerLayout.addView(editText);
-                    viewsToFocus.add(editText);
 
-                    if ("Enter your account number".equals(component.getString("hint"))) {
-                        AccnoEditText = editText;
-                    } else if ("Enter your mobile number".equals(component.getString("hint"))) {
-                        mobEditText = editText;
+                 else if ("edittext_mob".equals(type)) {
+                        EditText editText1 = new EditText(this);
+                        editText1.setHint(component.getString("hint"));
+                        editText1.setTextColor(Color.parseColor(component.getString("textColor")));
+                        InputFilter[] filters = new InputFilter[]{new InputFilter.LengthFilter(component.getInt("max_length"))};
+                        editText1.setFilters(filters);
+                        LinearLayout.LayoutParams paramss = new LinearLayout.LayoutParams(
+                                LinearLayout.LayoutParams.MATCH_PARENT,
+                                LinearLayout.LayoutParams.WRAP_CONTENT);
+                        paramss.setMargins(30, 0, 30, 0);
+                        editText1.setLayoutParams(paramss);
+                        editText1.setInputType(getInputType(component.getString("input_type")));
+                        applyBorder(editText1);
+                        innerLayout.addView(editText1);
+                        viewsToFocus.add(editText1);
+                        if ("Enter your account number".equals(component.getString("hint"))) {
+                            AccnoEditText = editText1;
+                        } else if ("Enter your mobile number".equals(component.getString("hint"))) {
+                            mobEditText = editText1;
+                        }
                     }
-                }
-               /* else if ("text_email".equals(type)) {
-                    TextView text_email = new TextView(this);
-                    text_email.setText(component.getString("value"));
-                    text_email.setPadding(30,30,30,30);
-                    text_email.setTextColor(Color.parseColor(component.getString("textColor")));
-                    innerLayout.addView(text_email);
-                }*/
-                else if ("text_componets".equals(type)) {
+
+                 else if ("text_componets".equals(type)) {
                     TextView text_pass = new TextView(this);
                     text_pass.setText(component.getString("value"));
-                    text_pass.setPadding(30,30,30,30);
+                    text_pass.setPadding(30, 30, 30, 30);
                     text_pass.setTextColor(Color.parseColor(component.getString("textColor")));
                     innerLayout.addView(text_pass);
                 }
-                else if ("button".equals(type)) {
-                    View buttonView = createButton(component);
-                    buttonView.setPadding(20,20,20,30);
-                    innerLayout.addView(buttonView);
+
+                 else if ("button".equals(type)) {
+                    //View buttonView = createButton(component);
+                    Button button = new Button(this);
+                    button.setPadding(30, 30, 30, 30);
+                    LinearLayout.LayoutParams paramss = new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            LinearLayout.LayoutParams.WRAP_CONTENT);
+                    paramss.setMargins(50, 50, 50, 50);
+                    button.setLayoutParams(paramss);
+                    button.setText(component.getString("text"));
+                    button.setTextColor(Color.parseColor(component.getString("textColor")));
+                    button.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
+                    button.setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.rounded_button_background));
+                    button.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if (validateFields()) {
+                                Intent intent = new Intent(LoginActivity.this, OTP.class);
+                                startActivity(intent);
+                            } else {
+                                Toast.makeText(LoginActivity.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                    innerLayout.addView(button);
                 }
-                else if ("forget_text".equals(type)) {
+
+                 else if ("forget_text".equals(type)) {
                     TextView forgettext = new TextView(this);
                     forgettext.setText(component.getString("value"));
                     forgettext.setTextSize(component.getInt("textSize"));
-                    forgettext.setPadding(30,30,30,30);
+                    forgettext.setPadding(30, 30, 30, 30);
                     forgettext.setTextColor(Color.parseColor(component.getString("textColor")));
                     forgettext.setGravity(Gravity.CENTER);
                     forgettext.setOnClickListener(new View.OnClickListener() {
@@ -173,17 +208,16 @@ public class LoginActivity extends AppCompatActivity {
                     innerLayout.addView(forgettext);
                 }
 
-                else if ("register_text".equals(type)) {
+                 else if ("register_text".equals(type)) {
                     TextView registertextView = new TextView(this);
                     registertextView.setText(component.getString("value"));
                     registertextView.setTextSize(component.getInt("textSize"));
-                    registertextView.setPadding(30,30,30,30);
+                    registertextView.setPadding(30, 30, 30, 30);
                     registertextView.setTextColor(Color.parseColor(component.getString("textColor")));
                     registertextView.setGravity(Gravity.CENTER);
                     registertextView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Toast.makeText(LoginActivity.this, "Helllo", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                             startActivity(intent);
                         }
@@ -191,6 +225,26 @@ public class LoginActivity extends AppCompatActivity {
                     innerLayout.addView(registertextView);
                 }
             }
+
+            // Add centered layout to root layout
+            rootLayout.addView(centeredLayout);
+
+            // Footer layout
+            RelativeLayout footerLayout = new RelativeLayout(this);
+            RelativeLayout.LayoutParams footerLayoutParams = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.MATCH_PARENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT);
+            footerLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+            footerLayout.setLayoutParams(footerLayoutParams);
+
+            BottomNavigationView bottomNavigationView = new BottomNavigationView(this);
+            bottomNavigationView.inflateMenu(R.menu.menu_navigation);
+            bottomNavigationView.setItemTextColor(ColorStateList.valueOf(Color.BLACK));
+            bottomNavigationView.setBackgroundColor(Color.WHITE);
+            footerLayout.addView(bottomNavigationView);
+
+            rootLayout.addView(footerLayout);
+
             setContentView(rootLayout);
 
             if (!viewsToFocus.isEmpty()) {
@@ -200,6 +254,7 @@ public class LoginActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
     private View createButton(JSONObject component) throws JSONException {
         ShimmerFrameLayout shimmerFrameLayout = new ShimmerFrameLayout(this);
         LinearLayout.LayoutParams shimmerParams = new LinearLayout.LayoutParams(
@@ -230,11 +285,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (validateFields()) {
-//                    showOtpDialog();
-
                     Intent intent = new Intent(LoginActivity.this, OTP.class);
                     startActivity(intent);
-
                 } else {
                     Toast.makeText(LoginActivity.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
                 }
@@ -299,12 +351,12 @@ public class LoginActivity extends AppCompatActivity {
         boolean isValid = true;
 
         if (AccnoEditText == null || AccnoEditText.getText().toString().trim().isEmpty()) {
-            AccnoEditText.setError("Invalid email");
+            AccnoEditText.setError("Enter Valid Account No.");
             isValid = false;
         }
 
         if (mobEditText == null || mobEditText.getText().toString().trim().isEmpty()) {
-            mobEditText.setError("Enter Valid Mobile No");
+            mobEditText.setError("Enter Valid Mobile No.");
             isValid = false;
         }
 

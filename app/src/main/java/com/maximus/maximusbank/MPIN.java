@@ -1,6 +1,7 @@
 package com.maximus.maximusbank;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.InputFilter;
@@ -11,12 +12,17 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
+
 import com.facebook.shimmer.Shimmer;
 import com.facebook.shimmer.ShimmerFrameLayout;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,33 +40,39 @@ public class MPIN extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mpin);
 
-        LinearLayout rootlayout = new LinearLayout(this);
-        rootlayout.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.MATCH_PARENT));
-        rootlayout.setOrientation(LinearLayout.VERTICAL);
-        rootlayout.setGravity(Gravity.CENTER);
-        rootlayout.setBackgroundColor(Color.WHITE);
-        rootlayout.setPadding(32, 32, 32, 32);
+        RelativeLayout rootLayout = new RelativeLayout(this);
+        rootLayout.setLayoutParams(new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.MATCH_PARENT,
+                RelativeLayout.LayoutParams.MATCH_PARENT));
+        rootLayout.setBackgroundColor(Color.WHITE);
+        rootLayout.setPadding(32, 32, 32, 32);
+
+        LinearLayout centeredLayout = new LinearLayout(this);
+        RelativeLayout.LayoutParams centeredLayoutParams = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.MATCH_PARENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT);
+        centeredLayoutParams.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
+        centeredLayout.setLayoutParams(centeredLayoutParams);
+        centeredLayout.setOrientation(LinearLayout.VERTICAL);
+        centeredLayout.setGravity(Gravity.CENTER);
+        centeredLayout.setBackgroundColor(Color.WHITE);
 
         CardView cardView = new CardView(this);
         LinearLayout.LayoutParams cardViewParams = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-        );
+                LinearLayout.LayoutParams.WRAP_CONTENT);
         cardView.setPadding(8, 8, 8, 8);
         cardViewParams.setMargins(8, 8, 8, 8);
         cardView.setLayoutParams(cardViewParams);
         cardView.setCardBackgroundColor(Color.WHITE);
         cardView.setCardElevation(16.0f);
         cardView.setRadius(24.0f);
-        rootlayout.addView(cardView);
+        centeredLayout.addView(cardView);
 
         LinearLayout innerLayout = new LinearLayout(this);
         innerLayout.setLayoutParams(new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.MATCH_PARENT
-        ));
+                LinearLayout.LayoutParams.MATCH_PARENT));
         innerLayout.setOrientation(LinearLayout.VERTICAL);
         innerLayout.setGravity(Gravity.CENTER);
         cardView.addView(innerLayout);
@@ -120,9 +132,36 @@ public class MPIN extends AppCompatActivity {
                     }
                 }
                 else if ("buttonlogin".equals(type)){
-                    View buttonView = createButton(component);
-                    buttonView.setPadding(20,20,20,30);
-                    innerLayout.addView(buttonView);
+//                    View buttonView = createButton(component);
+                    Button button = new Button(this);
+                    button.setPadding(20,20,20,30);
+                    LinearLayout.LayoutParams paramss = new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            LinearLayout.LayoutParams.WRAP_CONTENT);
+                    paramss.setMargins(50, 50, 50, 50);
+                    button.setLayoutParams(paramss);
+                    button.setText(component.getString("text"));
+                    button.setTextColor(Color.parseColor(component.getString("textColor")));
+                    button.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
+                    button.setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.rounded_button_background));
+                    button.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            String newPin = mpin.getText().toString();
+                            Intent intent = getIntent();
+                            String previousPin = intent.getStringExtra("PIN");
+                            if (!previousPin.equals(newPin)) {
+                                mpin.setError("Enter Valid Pin");
+                            } else {
+                                if (validateFields()) {
+                                    startActivity(new Intent(MPIN.this, MainActivity.class));
+                                } else {
+                                    Toast.makeText(MPIN.this, "Please fill all details", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        }
+                    });
+                    innerLayout.addView(button);
                 }
                 else if ("forget_text".equals(type)) {
                     TextView forgettext = new TextView(this);
@@ -141,8 +180,27 @@ public class MPIN extends AppCompatActivity {
                     innerLayout.addView(forgettext);
                 }
             }
+
+            rootLayout.addView(centeredLayout);
+
+            // Footer layout
+            RelativeLayout footerLayout = new RelativeLayout(this);
+            RelativeLayout.LayoutParams footerLayoutParams = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.MATCH_PARENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT);
+            footerLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+            footerLayout.setLayoutParams(footerLayoutParams);
+
+            BottomNavigationView bottomNavigationView = new BottomNavigationView(this);
+            bottomNavigationView.inflateMenu(R.menu.menu_navigation);
+            bottomNavigationView.setItemTextColor(ColorStateList.valueOf(Color.BLACK));
+            bottomNavigationView.setBackgroundColor(Color.WHITE);
+            footerLayout.addView(bottomNavigationView);
+
+            rootLayout.addView(footerLayout);
+
             //This will show the complete view of page
-            setContentView(rootlayout);
+            setContentView(rootLayout);
 
         } catch (IOException | JSONException e) {
             e.printStackTrace();
@@ -177,11 +235,17 @@ public class MPIN extends AppCompatActivity {
         buttonlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (validateFields()) {
-                    Toast.makeText(MPIN.this, "No Screen", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(MPIN.this, MainActivity.class));
+                String newPin = mpin.getText().toString();
+                Intent intent = getIntent();
+                String previousPin = intent.getStringExtra("PIN");
+                if (!previousPin.equals(newPin)) {
+                    mpin.setError("Enter Valid Pin");
                 } else {
-                    Toast.makeText(MPIN.this, "Please fill all details", Toast.LENGTH_SHORT).show();
+                    if (validateFields()) {
+                        startActivity(new Intent(MPIN.this, MainActivity.class));
+                    } else {
+                        Toast.makeText(MPIN.this, "Please fill all details", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });

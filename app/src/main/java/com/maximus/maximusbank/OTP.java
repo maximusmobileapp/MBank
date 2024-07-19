@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 
 import com.facebook.shimmer.Shimmer;
 import com.facebook.shimmer.ShimmerFrameLayout;
@@ -124,10 +125,33 @@ public class OTP extends AppCompatActivity {
                         edit_otp = editotp;
                     }
                 }
+
                 else if ("buttonconfirm".equals(type)) {
-                    View buttonView = createButton(component);
-                    buttonView.setPadding(20,20,20,30);
-                    innerLayout.addView(buttonView);
+//                    View buttonView = createButton(component);
+                    Button button = new Button(this);
+                    button.setPadding(20,20,20,30);
+                    LinearLayout.LayoutParams paramss = new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            LinearLayout.LayoutParams.WRAP_CONTENT);
+                    paramss.setMargins(50, 50, 50, 50);
+                    button.setLayoutParams(paramss);
+                    button.setText(component.getString("text"));
+                    button.setTextColor(Color.parseColor(component.getString("textColor")));
+                    button.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
+                    button.setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.rounded_button_background));
+                    button.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if (validateFields()) {
+                                Intent intent = new Intent(OTP.this, SetMpin.class);
+                                startActivity(intent);
+
+                            } else {
+                                Toast.makeText(OTP.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                    innerLayout.addView(button);
                 }
             }
             setContentView(rootLayout);

@@ -8,7 +8,9 @@
         "style": "header",
         "action": "",
         "textColor": "#000000",
-        "text": ""
+        "text": "",
+        "textSize": 0,
+        "max_length": 0
       },
       {
         "type": "text_name",
@@ -16,7 +18,9 @@
         "style": "",
         "action": "",
         "textColor": "#000000",
-        "text": ""
+        "text": "",
+        "textSize": 0,
+        "max_length": 0
       },
       {
         "type": "edit_text",
@@ -27,7 +31,9 @@
         "input_type": "textName",
         "borderColor": "#000000",
         "textColor": "#000000",
-        "text": ""
+        "text": "",
+        "textSize": 0,
+        "max_length": 0
       },
       {
         "type": "text_mobile",
@@ -35,7 +41,9 @@
         "style": "",
         "action": "",
         "textColor": "#000000",
-        "text": ""
+        "text": "",
+        "textSize": 0,
+        "max_length": 0
       },
       {
         "type": "editmobile",
@@ -47,7 +55,8 @@
         "borderColor": "#000000",
         "textColor": "#000000",
         "text": "",
-        "max_length": 10
+        "max_length": 10,
+        "textSize": 0
       },
       {
         "type": "text_email",
@@ -55,7 +64,9 @@
         "style": "",
         "action": "",
         "textColor": "#000000",
-        "text": ""
+        "text": "",
+        "textSize": 0,
+        "max_length": 0
       },
       {
         "type": "edit_text",
@@ -66,7 +77,9 @@
         "input_type": "textEmail",
         "borderColor": "#000000",
         "textColor": "#000000",
-        "text": ""
+        "text": "",
+        "textSize": 0,
+        "max_length": 0
       },
       {
         "type": "buttonregister",
@@ -74,7 +87,9 @@
         "style": "",
         "action": "register",
         "textColor": "",
-        "text": "Register"
+        "text": "Register",
+        "textSize": 0,
+        "max_length": 0
       },
       {
         "type": "login_text",
@@ -83,7 +98,8 @@
         "action": "login",
         "textColor": "#ff33b5e5",
         "text": "",
-        "textSize": 16
+        "textSize": 16,
+        "max_length": 0
       }
     ]
   }

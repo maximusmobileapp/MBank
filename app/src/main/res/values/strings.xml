@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">MaximusBank</string>
+
+    <array name="spinner1">
+        <item name="view_only">Please select account</item>
+    </array>
+
+    <array name="spinner2">
+        <item name="view_only">Select benef name</item>
+    </array>
+
+    <string name="Rs">Up to \u20B9 200</string>
+    <string name="Rs1"> \u20B9200 - \u20B9500 </string>
+    <string name="Rs2"> \u20B9500 - \u20B92,000 </string>
+    <string name="Rs3"> Above \u20B92,000 </string>
 </resources>

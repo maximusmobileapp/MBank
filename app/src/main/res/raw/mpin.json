@@ -6,45 +6,62 @@
         "type": "text",
         "value": "MPIN",
         "style": "header",
+        "action": "",
         "textColor": "#000000",
         "hint": "",
         "input_type": "",
-        "borderColor": ""
+        "borderColor": "",
+        "textSize": 0,
+        "maxlength": 0
       },
       {
         "type": "text_New",
         "value": "Enter MPIN",
         "style": "",
+        "action": "",
         "textColor": "#000000",
         "hint": "",
         "input_type": "",
-        "borderColor": ""
+        "borderColor": "",
+        "textSize": 0,
+        "maxlength": 0
       },
       {
         "type": "edit_MPIN",
         "value": "Enter MPIN",
         "style": "",
+        "action": "",
         "textColor": "#000000",
         "hint": "Enter MPIN",
         "input_type": "textMPIN",
         "borderColor": "#000000",
+        "textSize": 0,
         "maxlength": 4
       },
       {
         "type": "buttonlogin",
+        "value": "",
+        "style": "",
+        "textColor": "#FFFFFF",
         "text": "Login",
         "action": "login",
         "hint": "",
         "input_type": "",
-        "borderColor": ""
+        "borderColor": "",
+        "textSize": 0,
+        "maxlength": 0
       },
       {
         "type": "forget_text",
         "value": "Forget Password ?",
         "style": "link",
+        "hint": "",
+        "input_type": "",
         "action": "login",
         "textColor": "#ff33b5e5",
-        "textSize": 16
+        "borderColor": "",
+        "textSize": 16,
+        "maxlength": 0
       }
     ]
   }

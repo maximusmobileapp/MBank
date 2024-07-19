@@ -7,12 +7,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-
 import com.maximus.maximusbank.Utils.Utils;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -58,8 +55,7 @@ public class FundTransferActivity extends AppCompatActivity {
                 CardView cardView = new CardView(this);
                 LinearLayout.LayoutParams cardParams = new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
-                        LinearLayout.LayoutParams.WRAP_CONTENT
-                );
+                        LinearLayout.LayoutParams.WRAP_CONTENT);
                 cardParams.setMargins(16, 16, 16, 0); // Set margins
                 cardView.setLayoutParams(cardParams);
                 cardView.setRadius(8); // Set corner radius
@@ -70,8 +66,7 @@ public class FundTransferActivity extends AppCompatActivity {
                 TextView textView = new TextView(this);
                 LinearLayout.LayoutParams textParams = new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.WRAP_CONTENT,
-                        LinearLayout.LayoutParams.WRAP_CONTENT
-                );
+                        LinearLayout.LayoutParams.WRAP_CONTENT);
                 textView.setLayoutParams(textParams);
                 textView.setText(title);
                 textView.setTextSize(18);
@@ -79,16 +74,13 @@ public class FundTransferActivity extends AppCompatActivity {
                 textView.setPadding(32, 32, 32, 32); // Set padding
                 textView.setGravity(Gravity.CENTER);
 
-                // Add TextView to CardView
                 cardView.addView(textView);
 
-                // Set click listener for CardView
                 cardView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         // Handle click event
                         Toast.makeText(FundTransferActivity.this, "Clicked: " + title, Toast.LENGTH_SHORT).show();
-                        // Perform action based on 'action' identifier
                         handleFundTransferAction(action);
                     }
                 });
@@ -106,13 +98,9 @@ public class FundTransferActivity extends AppCompatActivity {
         setContentView(rootView);
     }
 
-    // Dummy method to handle fund transfer actions
     private void handleFundTransferAction(String action) {
-        // Implement your logic based on the action identifier
-        // For example, navigate to a new activity or perform an action
         switch (action) {
             case "initiate_within_bank_transfer":
-                // Handle within-bank transfer action
                 break;
             case "initiate_other_bank_transfer":
                 // Handle other-bank transfer action

@@ -2,17 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/dashboard"
+        android:id="@+id/atm"
         android:title="ATM"
-        android:icon="@drawable/atm"/>
-    <item
-        android:id="@+id/home"
-        android:title="InstantPay"
-        android:icon="@drawable/instapay"/>
+        android:icon="@drawable/atm" />
 
     <item
-        android:id="@+id/about"
+        android:id="@+id/scanpay"
         android:title="Scan Pay"
         android:icon="@drawable/scan_pay"/>
+
+    <item
+        android:id="@+id/instantpay"
+        android:title="InstantPay"
+        android:icon="@drawable/instapay"/>
 
 </menu>

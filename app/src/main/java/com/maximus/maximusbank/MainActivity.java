@@ -10,11 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
-import android.widget.FrameLayout;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -22,7 +20,6 @@ import android.widget.ToggleButton;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.core.view.GravityCompat;
 import androidx.core.widget.NestedScrollView;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -301,14 +298,19 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         if (1 == id) {
-                            startActivity(new Intent(MainActivity.this, FundTransferActivity.class));
+                            startActivity(new Intent(MainActivity.this, FundTrans.class));
+                        } else if (2 == id){
+                            startActivity(new Intent(MainActivity.this, CardControlActivity.class));
+                        } else if (3 == id){
+                            startActivity(new Intent(MainActivity.this, TransactionHistory.class));
+                        } else if (4 == id){
+                            startActivity(new Intent(MainActivity.this, SpiltBill.class));
                         } else {
-                            Toast.makeText(MainActivity.this, "" + title, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
             }
-
         } catch (JSONException e) {
             e.printStackTrace();
         } catch (Exception e) {
@@ -427,9 +429,6 @@ public class MainActivity extends AppCompatActivity {
             throw new RuntimeException(e);
         }
     }
-
-
-
 
     private JSONObject loadJsonFromRaw(int resId) throws JSONException {
         try {

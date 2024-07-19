@@ -5,6 +5,9 @@
       {
         "type": "text",
         "value": "Forget Password",
+        "hint": "",
+        "text": "",
+        "action": "",
         "style": "header",
         "textColor": "#000000",
         "textStyle": "bold"
@@ -12,19 +15,36 @@
       {
         "type": "text_accno",
         "value": "Account No.",
-        "textColor": "#000000"
+        "hint": "",
+        "style": "",
+        "text": "",
+        "action": "",
+        "textColor": "#000000",
+        "textStyle": ""
       },
       {
         "type": "edittext_account",
+        "value": "",
+        "text": "",
+        "action": "",
         "hint": "Enter Account No.",
+        "style": "",
         "input_type": "textAccount",
         "borderColor": "#000000",
-        "textColor": "#000000"
+        "textColor": "#000000",
+        "textStyle": ""
       },
       {
         "type": "buttonforget",
+        "value": "",
         "text": "Forget Password",
-        "action": "forget password"
+        "action": "forget password",
+        "hint": "",
+        "style": "",
+        "input_type": "",
+        "borderColor": "",
+        "textColor": "#FFFFFF",
+        "textStyle": ""
       }
     ]
   }

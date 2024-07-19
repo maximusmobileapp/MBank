@@ -1,0 +1,95 @@
+{
+  "screen": {
+    "title": "Fund Transfer",
+    "components": [
+      {
+        "text": "Self Transfer",
+        "textColor": "#FFFFFF",
+        "textSize": 25,
+        "textStyle": "bold",
+        "fontStyle": "Baskervville SC"
+      },
+      {
+        "text": "From Account",
+        "textColor": "#333333",
+        "textSize": 15,
+        "textStyle": "bold",
+        "fontStyle": ""
+      },
+      {
+        "Spinner": "SpinnerFromAcc",
+        "textColor": "#333333",
+        "textSize" : 0,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "text": "Available Balance",
+        "textColor": "#333333",
+        "textSize": 15,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "EditText": "Etbalance",
+        "hint": "XXXX.XXX",
+        "textColor": "#333333",
+        "textSize": 0,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "text": "To Account",
+        "textColor": "#333333",
+        "textSize": 15,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "Spinner": "SpinnerToAcc",
+        "textColor": "#333333",
+        "textSize" : 0,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "text": "Amount",
+        "textColor": "#333333",
+        "textSize": 15,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "EditText": "Etamount",
+        "hint": "Enter Amount",
+        "textColor": "#333333",
+        "textSize": 0,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "text": "Remark",
+        "textColor": "#333333",
+        "textSize": 15,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "EditText": "Etremark",
+        "hint": "Enter remark",
+        "textColor": "#333333",
+        "textSize": 0,
+        "textStyle": "",
+        "fontStyle": ""
+      },
+      {
+        "type": "Button",
+        "text": "",
+        "action": "",
+        "hint" : "",
+        "textSize": 10,
+        "textColor": "#000011"
+      }
+    ]
+  }
+}

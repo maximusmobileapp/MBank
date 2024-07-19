@@ -1,0 +1,31 @@
+{
+  "screen": {
+    "title": "Fund Transfer",
+    "components": [
+      {
+        "text": "Fund Transfer",
+        "textColor": "#FFFFFF",
+        "textSize": 25,
+        "textStyle": "bold"
+      },
+      {
+        "text": "Within Bank",
+        "textColor": "#333333",
+        "textSize": 16,
+        "textStyle": "bold"
+      },
+      {
+        "text": "Other Bank",
+        "textColor": "#333333",
+        "textSize": 16,
+        "textStyle": "bold"
+      },
+      {
+        "text": "Self Transfer",
+        "textColor" : "#333333",
+        "textSize": 16,
+        "textStyle": "bold"
+      }
+    ]
+  }
+}

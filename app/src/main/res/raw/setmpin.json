@@ -6,13 +6,25 @@
         "type" : "text",
         "value" : "Set MPIN",
         "style" : "header",
-        "textColor": "#000000"
+        "textColor": "#000000",
+        "hint": "",
+        "input_type": "",
+        "borderColor": "",
+        "text": "",
+        "maxlength": 0,
+        "action": ""
       },
       {
         "type" : "text_New",
         "value" : "Enter New MPIN",
         "style" : "",
-        "textColor" : "#000000"
+        "textColor" : "#000000",
+        "hint": "",
+        "input_type": "",
+        "borderColor": "",
+        "text": "",
+        "maxlength": 0,
+        "action": ""
       },
       {
         "type" : "edit_New",
@@ -22,29 +34,43 @@
         "hint": "Enter MPIN",
         "input_type": "textMPIN",
         "borderColor": "#000000",
-        "maxlength": 4
+        "text": "",
+        "maxlength": 4,
+        "action": ""
       },
       {
         "type" : "text_Confirm",
         "value" : "Confirm New MPIN",
         "style" : "",
-        "textColor" : "#000000"
+        "textColor" : "#000000",
+        "hint": "",
+        "input_type":"",
+        "borderColor": "",
+        "text": "",
+        "maxlength": 0,
+        "action": ""
       },
       {
         "type" : "edit_New",
         "value" : "Enter Confirm MPIN",
         "style" : "",
+        "text": "",
         "hint": "Enter Confirm MPIN",
         "input_type": "textMPIN",
-        "borderWidth": 2,
         "borderColor": "#000000",
         "textColor": "#000000",
-        "maxlength": 4
+        "maxlength": 4,
+        "action": ""
       },
       {
         "type": "buttonnext",
         "value" : "",
         "style" : "",
+        "textColor": "#FFFFFF",
+        "hint":"",
+        "input_type":"",
+        "borderColor": "",
+        "maxlength": 0,
         "text": "Next",
         "action": "next"
       }

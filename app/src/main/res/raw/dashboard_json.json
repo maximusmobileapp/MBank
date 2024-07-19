@@ -59,7 +59,7 @@
       },
       {
         "id": 2,
-        "title": "Bill Payments",
+        "title": "Card Control",
         "icon": "ic_bill_payment",
         "background": "#FFC107",
         "action": "PAY_BILLS"
@@ -73,7 +73,7 @@
       },
       {
         "id": 4,
-        "title": "Notifications",
+        "title": "Split Bill",
         "icon": "ic_notifications",
         "background": "#9C27B0",
         "action": "VIEW_NOTIFICATIONS"

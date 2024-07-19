@@ -6,27 +6,46 @@
         "type": "text",
         "value": "OTP",
         "style": "header",
-        "textColor": "#000000"
+        "textColor": "#000000",
+        "hint": "",
+        "input_type": "",
+        "action": "",
+        "text": "",
+        "maxlength": 0
       },
       {
         "type" : "text_otp",
         "value" : "Enter OTP",
-        "textColor" : "#000000"
+        "style": "",
+        "textColor" : "#000000",
+        "hint": "",
+        "input_type": "",
+        "action": "",
+        "text": "",
+        "maxlength": 0
       },
       {
         "type" : "edit_otp",
         "value" : "Enter OTP",
+        "style": "",
         "hint": "Enter OTP",
         "input_type": "textOTP",
-        "borderWidth": 2,
         "borderColor": "#000000",
         "textColor": "#000000",
+        "action": "",
+        "text": "",
         "maxlength": 6
       },
       {
         "type": "buttonconfirm",
+        "value" : "",
+        "style": "",
+        "textColor": "#FFFFFF",
+        "hint": "",
+        "input_type": "",
         "text": "Verify OTP",
-        "action": "confirm"
+        "action": "confirm",
+        "maxlength": 0
       }
     ]
   }

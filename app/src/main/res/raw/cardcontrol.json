@@ -1,0 +1,170 @@
+{
+  "screen": {
+    "title": "Card Control",
+    "components": [
+      {
+        "text": "Card Control",
+        "textColor": "#FFFFFF",
+        "textSize": 25,
+        "textStyle": "bold",
+        "fontStyle": "",
+        "hint": ""
+      },
+      {
+        "type": "CardView",
+        "backgroundColor": "#808080",
+        "borderColor": "#000000",
+        "borderWidth": 2,
+        "components": [
+          {
+            "text": "Card Number",
+            "textColor": "#000000",
+            "textSize": 10,
+            "textStyle": "normal",
+            "fontStyle": "",
+            "hint": ""
+          },
+          {
+            "text": "Unblock",
+            "textColor": "#000000",
+            "textSize": 10,
+            "textStyle": "normal",
+            "fontStyle": "",
+            "hint": ""
+          },
+          {
+            "text": "CardNo",
+            "textColor": "#000000",
+            "textSize": 10,
+            "textStyle": "normal",
+            "fontStyle": "",
+            "hint": ""
+          }
+        ]
+      },
+      {
+        "type": "CardView",
+        "backgroundColor": "#808080",
+        "borderColor": "#000000",
+        "borderWidth": 2,
+        "components": [
+          {
+            "text": "Channel",
+            "textColor": "#000000",
+            "textSize": 10,
+            "textStyle": "normal",
+            "fontStyle": "",
+            "hint": ""
+          },
+          {
+            "text": "Status",
+            "textColor": "#000000",
+            "textSize": 10,
+            "textStyle": "normal",
+            "fontStyle": "",
+            "hint": ""
+          },
+          {
+            "text": "Per Day (Rs.)",
+            "textColor": "#000000",
+            "textSize": 10,
+            "textStyle": "normal",
+            "fontStyle": "",
+            "hint": ""
+          },
+          {
+            "text": "Avail Amount",
+            "textColor": "#000000",
+            "textSize": 10,
+            "textStyle": "normal",
+            "fontStyle": "",
+            "hint": ""
+          },
+          {
+            "text": "ATM",
+            "type": "",
+            "textColor": "#000000",
+            "textSize": 10,
+            "textStyle": "normal",
+            "fontStyle": "",
+            "hint": ""
+          },
+          {
+            "type": "EditText",
+            "text": "",
+            "hint": "25000",
+            "textSize": 25,
+            "textStyle": "normal",
+            "fontStyle": ""
+          },
+          {
+            "text": "txtamount1",
+            "type": "",
+            "hint": "",
+            "textSize": 10,
+            "textStyle": "normal",
+            "fontStyle": ""
+          },
+          {
+            "text": "POS",
+            "type": "",
+            "hint": "",
+            "textSize": 10,
+            "textStyle": "normal",
+            "fontStyle": ""
+          },
+          {
+            "type": "EditText",
+            "text": "",
+            "hint": "25000",
+            "textSize": 25,
+            "textStyle": "normal",
+            "fontStyle": ""
+          },
+          {
+            "text": "txtamount2",
+            "type": "",
+            "hint": "",
+            "textSize": 10,
+            "textStyle": "normal",
+            "fontStyle": ""
+          },
+          {
+            "text": "E-Com",
+            "type": "",
+            "hint": "",
+            "textSize": 10,
+            "textStyle": "normal",
+            "fontStyle": ""
+          },
+          {
+            "type": "EditText",
+            "text": "",
+            "hint": "25000",
+            "textSize": 25,
+            "textStyle": "normal",
+            "fontStyle": ""
+          },
+          {
+            "text": "txtamount3",
+            "type": "",
+            "hint": "",
+            "textSize": 10,
+            "textStyle": "normal",
+            "fontStyle": ""
+          },
+          {
+            "text": "Button",
+            "type" : "",
+            "hint" : "",
+            "textColor": "#000000",
+            "textSize" : 10,
+            "textStyle" : "normal",
+            "backgroundColor": "#FFFFFF",
+            "fontStyle" : ""
+          }
+        ]
+      }
+    ]
+  }
+}

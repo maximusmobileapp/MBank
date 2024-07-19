@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/btmdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Date"
+            android:textSize="15dp" />
+
+        <ImageButton
+            android:id="@+id/btmclosedate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="300dp"
+            android:layout_toRightOf="@+id/btmdate"
+            android:background="@color/transparent"
+            android:src="@drawable/close" />
+
+
+        <TextView
+            android:id="@+id/txtfromdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btmdate"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="From Date" />
+
+        <TextView
+            android:id="@+id/txtToDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btmdate"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/txtfromdate"
+            android:text="To Date" />
+
+        <TextView
+            android:id="@+id/fromdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtfromdate"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="DD-MM-YYYY" />
+
+        <TextView
+            android:id="@+id/todate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtfromdate"
+            android:layout_toRightOf="@+id/fromdate"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="10dp"
+            android:hint="DD-MM-YYYY" />
+
+        <ImageView
+            android:id="@+id/datepicker1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtfromdate"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/fromdate"
+            android:src="@drawable/calender" />
+
+        <ImageView
+            android:id="@+id/datepicker2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtfromdate"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/todate"
+            android:src="@drawable/calender" />
+
+        <RadioButton
+            android:id="@+id/btmonth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/datepicker1"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:button="@null"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:text="This month"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/btmdays30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btmonth"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:button="@null"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:text="Last 30 days"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/btmdays90"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btmdays30"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:button="@null"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:text="Last 90 days"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/btmclear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btmdays90"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/transparent"
+            android:text="Clear all"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btmapply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btmdays90"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/btmclear"
+            android:text="Apply" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

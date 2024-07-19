@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativebtm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/btmStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Status"
+            android:textSize="15dp" />
+
+        <ImageButton
+            android:id="@+id/btmclose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btmStatus"
+            android:layout_marginStart="290dp"
+            android:src="@drawable/close"
+            android:background="@color/transparent"
+            android:layout_marginTop="20dp"/>
+
+        <RelativeLayout
+            android:id="@+id/relative2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btmStatus">
+
+            <ImageButton
+                android:id="@+id/imgcomplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/transparent"
+                android:src="@drawable/complete" />
+
+            <RadioButton
+                android:id="@+id/txtcomplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginEnd="20dp"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="Completed"
+                android:textSize="15dp" />
+
+            <ImageButton
+                android:id="@+id/imgfail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgcomplete"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/transparent"
+                android:src="@drawable/cancel" />
+
+            <RadioButton
+                android:id="@+id/txtfail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtcomplete"
+                android:layout_marginStart="90dp"
+                android:layout_marginEnd="20dp"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="Failed"
+                android:textSize="15dp" />
+
+            <ImageButton
+                android:id="@+id/imgprocess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgfail"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/transparent"
+                android:src="@drawable/process" />
+
+            <RadioButton
+                android:id="@+id/txtprocess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtfail"
+                android:layout_marginStart="90dp"
+                android:layout_marginEnd="20dp"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="Processing"
+                android:textSize="15dp" />
+
+
+            <Button
+                android:id="@+id/btmclear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear all"
+                android:background="@color/transparent"
+                android:textColor="@color/black"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/txtprocess" />
+
+            <Button
+                android:id="@+id/btmapply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apply"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="16dp"
+                android:layout_toRightOf="@+id/btmclear"
+                android:layout_below="@+id/txtprocess"/>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+        </RelativeLayout>
