@@ -1,37 +1,28 @@
 package com.maximus.maximusbank.activity.fundTransfer;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.TypedValue;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.maximus.maximusbank.FundTransferActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 import com.maximus.maximusbank.R;
 import com.maximus.maximusbank.Utils.Utils;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.IOException;
-import java.io.InputStream;
 
 public class FundTransferDashboard extends AppCompatActivity {
 
-    private TextView titleView,txtWithin,txtOther,txtSelf;
-    private CardView card1,card2,card3;
+    private TextView titleView, txtWithin, txtOther, txtSelf;
+    private CardView card1, card2, card3;
     private ImageView imgvector;
     TextView headerTextView;
 
@@ -40,9 +31,10 @@ public class FundTransferDashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fund_transfer_dashboard);
-
-         headerTextView = findViewById(R.id.headerTextView);
-         headerTextView.setText(R.string.fund_transfer);
+        ImageView backPressImg = findViewById(R.id.backButton);
+        Utils.onBackPress(this, backPressImg);
+        headerTextView = findViewById(R.id.headerTextView);
+        headerTextView.setText(R.string.fund_transfer);
         txtWithin = findViewById(R.id.txtwithin);
         txtOther = findViewById(R.id.txtother);
         txtSelf = findViewById(R.id.txtself);
@@ -51,12 +43,10 @@ public class FundTransferDashboard extends AppCompatActivity {
         card3 = findViewById(R.id.card3);
 
 
-
-
         card1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FundTransferDashboard.this, ThirdPartyTransferActivity.class);
+                Intent intent = new Intent(FundTransferDashboard.this, WithinBankTransferActivity.class);
                 startActivity(intent);
             }
         });
@@ -76,6 +66,12 @@ public class FundTransferDashboard extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Utils.setLocale(this);
     }
 
     private void applyTextConfig(JSONArray components, TextView[] textViews) {

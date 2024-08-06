@@ -21,6 +21,7 @@ import androidx.core.content.ContextCompat;
 import com.facebook.shimmer.Shimmer;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.maximus.maximusbank.R;
+import com.maximus.maximusbank.Utils.Utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -160,6 +161,12 @@ public class OTP extends AppCompatActivity {
         } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Utils.setLocale(this);
     }
 
     private View createButton(JSONObject component)throws JSONException {

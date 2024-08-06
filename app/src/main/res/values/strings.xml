@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">MaximusBank</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home">Home</string>
     <string name="accounts">Accounts\n</string>
@@ -27,6 +25,103 @@
     <string name="self_transfer">Self Transfer</string>
     <string name="third_party">Within Bank Transfer</string>
 
+
+    <string name="account_overview">Account Overview</string>
+    <string name="selected_contacts">Selected Contacts</string>
+    <string name="split_now">Split Now</string>
+    <string name="total_bill">Total Bill</string>
+    <string name="contacts">Contacts</string>
+    <string name="enter_amount">₹ Enter Amount</string>
+    <string name="select_account_type">Select Account Type</string>
+    <string name="enter_account_number">Enter Account Number</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="enter_bank_name">Enter Bank Name</string>
+    <string name="transfer_limit">Transfer Limit</string>
+    <string name="enter_transfer_limit">Enter Transfer Limit</string>
+    <string name="beneficiary_name">Beneficiary Name</string>
+    <string name="enter_beneficiary_name">Enter Beneficiary Name</string>
+    <string name="preview">Preview</string>
+    <string name="account_type">Account Type</string>
+
+
+    <string name="cheque_book">Cheque Book</string>
+    <string name="stop_book">Stop Cheque Request</string>
+    <string name="within_bank">Within Bank</string>
+    <string name="other_bankk">Other Bank</string>
+    <string name="split_bill">Split Bill</string>
+    <string name="acc_no">Account Number</string>
+    <string name="no_pages">No of pages</string>
+    <string name="pref_add">Select Preferred Address</string>
+    <string name="comm_add">Communication Address</string>
+    <string name="pickup">Pickup 24x7</string>
+    <string name="confirm">Confirm</string>
+    <string name="clear">Clear</string>
+    <string name="from_acc">From Account</string>
+    <string name="add_benef">Add Beneficiary</string>
+    <string name="et_acc_no">Enter Account Number</string>
+    <string name="ifsc">IFSC</string>
+    <string name="et_ifsc">Enter IFSC</string>
+    <string name="amu">Amount</string>
+    <string name="et_amu">Enter Amount</string>
+    <string name="remark">Remark</string>
+    <string name="et_remark">Enter Remark</string>
+    <string name="btn_continue">Continue</string>
+    <string name="btn_addbenef">Add Beneficiary</string>
+    <string name="avil_blce">Available Balance</string>
+    <string name="to_acc">To Account</string>
+    <string name="total_amu">Total Bill Amount</string>
+    <string name="btn_add">Add</string>
+    <string name="search_trans"> Search transactions</string>
+    <string name="status">Status</string>
+    <string name="pay_method">Payment method</string>
+    <string name="date">Date</string>
+    <string name="pay_type">Payment Type</string>
+    <string name="july">July 2024</string>
+    <string name="within">Within Fund Transfer</string>
+    <string name="select_benef">Select Beneficiary</string>
+    <string name="XX">XXXX.XX</string>
+    <string name="No.">237773XXXX73733</string>
+    <string name="clear_all">Clear all</string>
+    <string name="apply">Apply</string>
+    <string name="fr_date">From Date</string>
+    <string name="to_date">To Date</string>
+    <string name="date_format">DD/MM/YYYY</string>
+    <string name="this_month">This month</string>
+    <string name="last_30">Last 30 days</string>
+    <string name="last_90">Last 90 days</string>
+    <string name="self_bank">Self Bank</string>
+    <string name="completed">Completed</string>
+    <string name="fail">Failed</string>
+    <string name="process">Processing</string>
+    <string name="filters">Filters</string>
+    <string name="bal">Balance</string>
+    <string name="card_no">Card Number</string>
+    <string name="card">Card No : 72 XXXX XXX XX 62</string>
+    <string name="unblock">Unblock</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="pay_from">Pay From</string>
+    <string name="review">Review</string>
+    <string name="cancel">Cancel</string>
+    <string name="hello">Hello</string>
+    <string name="address">Mumbai GPO: 400001, Mumbai taluk of Mumbai district, Maharashtra State</string>
+    <string name="add">address</string>
+    <string name="sel_state">Select State</string>
+    <string name="sel_city">Select City</string>
+    <string name="pickup_loc">Select Pickup Location</string>
+    <string name="cheque_success">Cheque Book Request for Account XX9723 has been accepted.The delivery will be attempted in 7 working days</string>
+    <string name="chequeno"> Cheque No </string>
+    <string name="enter_chequeno"> Enter Cheque No </string>
+    <string name="ReasonChequeStop"> Reason for Stopping</string>
+    <string name="Success">Success!</string>
+    <string name="stop_text"> Your request has been completed</string>
+    <string name="depositto">Deposit To</string>
+    <string name="capture_image">Capture Cheque Image</string>
+    <string name="capture_front">Capture Front Image</string>
+    <string name="capture_back">Capture Back Image</string>
+    <string name="cheque_deposit">Cheque Deposit</string>
+
+
     <string-array name="spinner_items">
         <item>Select an Account Number</item>
         <item>95646546548</item>
@@ -43,9 +138,127 @@
         <item name="view_only">Select benef name</item>
     </array>
 
+    <array name="AccountNo">
+        <item name="view_only">Select Account Number</item>
+        <item>234454XXX7899</item>
+        <item>886672XXXX2782</item>
+    </array>
+
+    <array name="NoPages">
+        <item name="view_only">Select Pages</item>
+        <item>"25"</item>
+        <item>"50"</item>
+    </array>
+
+    <array name="State">
+        <item name="view_only">Select State</item>
+        <item>Maharashtra</item>
+        <item>Assam</item>
+        <item>Gujrat</item>
+        <item>Andhra Pradesh</item>
+    </array>
+
+    <array name="City">
+        <item name="view_only">Select City</item>
+        <item>Mumbai</item>
+        <item>Hyderabad</item>
+        <item>Chennai</item>
+        <item>Bengaluru</item>
+    </array>
+
+    <array name="Location">
+        <item name="view_only">Select Location</item>
+        <item>BKC Tower</item>
+        <item>Wagle Estate</item>
+        <item>90 Feet Rd</item>
+        <item>Hill Rd</item>
+    </array>
+
+    <array name="Address">
+        <item name="view_only">Select Address</item>
+        <item>B-101, Bharat Nagar Rd, G Block BKC, Bandra Kurla Complex, Bandra East, Mumbai,
+            Maharashtra 400051
+        </item>
+        <item>G Block Rd, G Block BKC, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra
+            400098
+        </item>
+        <item>WRHJ+W24, Karmaveer Bhaurao Patil Marg, Mantralaya, Fort, Mumbai, Maharashtra 400032
+        </item>
+        <item>C-10, MIDC Central Rd, Marol MIDC Industry Estate, Andheri East, Mumbai, Maharashtra
+            400093
+        </item>
+    </array>
+
+    <array name="Reason">
+        <item name="view_only">Reason for stopping</item>
+        <item>Cheque Book Not Received</item>
+        <item>Cheque Book Lost</item>
+        <item>Cheque Book Stolen</item>
+        <item>Cheque lost</item>
+        <item>Stop Payment of Cheque</item>
+        <item>Wrong Amount spent</item>
+        <item>Cheque Forged</item>
+    </array>
+
     <string name="Rs">Up to \u20B9 200</string>
     <string name="Rs1"> \u20B9200 - \u20B9500 </string>
     <string name="Rs2"> \u20B9500 - \u20B92,000 </string>
     <string name="Rs3"> Above \u20B92,000 </string>
+    <string name="change_theme">Change Theme</string>
+    <string name="change_language">Change Language</string>
+    <string name="light_theme">Light Theme</string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="change_password">Change Password</string>
+    <string name="change_your_account_password">Change your account password</string>
+    <string name="other">Other</string>
+    <string name="theme">Theme</string>
+    <string name="language">Language</string>
+    <string name="choose_your_language">Choose your language</string>
+    <string name="recent_transaction">Recent transaction</string>
+    <string name="beneficiary">Beneficiary</string>
+    <string name="request">Request</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="account_balance">Account Balance</string>
+    <string name="other_services">Other Services</string>
+    <string name="recent_activity">Recent Activity</string>
+
+    <string name="turn_on_flashlight">FLash</string>
+    <string name="step">Step Title</string>
+    <string name="done">Done</string>
+    <string name="et_ifsc_hint">Enter IFSC</string>
+    <string name="et_amu_hint">Enter Amount</string>
+
+    <string name="pay_mode">Bank Transfer</string>
+    <string name="pay_time">Payment Time\n29 July 2024 11.24</string>
+    <string name="ref_no">Ref Number\n00580023477</string>
+    <string name="idr_hint">Rs 1,00,000</string>
+    <string name="total_pay">Total Payment</string>
+    <string name="pay_success">Your Payment has been successfully done.</string>
+    <string name="payment">Payment Success!</string>
+    <string name="Ref_no">Ref Number</string>
+    <string name="pay_tym">Payment Time</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="date_format_hint">DD/MM/YYYY</string>
+    <string name="account_statement">Account Statement</string>
+    <string name="loan_calculator">Loan Calculator</string>
+    <string name="loan_enquiry">Loan Enquiry</string>
+    <string name="loan_repayment">Loan Repayment</string>
+    <string name="open_loan">Loan Against FD</string>
+    <string name="cheque_book_request">Check Book Request</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="reciept">Receipt</string>
+    <string name="Account_statement">Account Statement</string>
+    <string name="request_money">Request Money</string>
+    <string name="Rupees">How much \u20B9?</string>
+    <string name="whom">To whom?</string>
+    <string name="For">What for?</string>
+    <string name="reason">If needed, tell what do you ask money for?</string>
+    <string name="send">Request was sent</string>
+    <string name="amount">\u20B9</string>
+    <string name="ok">Ok</string>
+    <string name="generate_qr">Generate QR</string>
+    <string name="share_qr">Share QR</string>
+    <string name="save">Save</string>
 
 </resources>

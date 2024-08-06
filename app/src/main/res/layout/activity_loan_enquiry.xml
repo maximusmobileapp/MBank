@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    tools:context=".activity.account.LoanEnquiryActivity">
+
+    <include android:id="@+id/headerLayout"
+        layout="@layout/common_header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/headerLayout"
+        android:padding="16dp"
+        android:layout_margin="@dimen/_20sdp"
+        android:background="@drawable/curved_background"
+        android:elevation="@dimen/_8sdp">
+
+
+    <EditText
+        android:id="@+id/etLoanNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Loan Number"
+        android:drawableStart="@drawable/ic_loan_number"
+        android:drawablePadding="10dp"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext_bg"/>
+
+    <Button
+        android:id="@+id/btnEnquire"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enquire"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext_bg"/>
+
+    <TextView
+        android:id="@+id/tvEnquiryResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enquiry Result: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textColor="?attr/colorSurface"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/rounded_textview"/>
+    </LinearLayout>
+</LinearLayout>

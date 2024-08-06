@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.maximus.maximusbank.R;
-import com.maximus.maximusbank.model.Account;
+import com.maximus.maximusbank.Model.Account;
 
 import java.util.List;
 

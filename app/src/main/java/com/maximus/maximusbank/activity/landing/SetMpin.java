@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.maximus.maximusbank.R;
+import com.maximus.maximusbank.Utils.Utils;
 
 public class SetMpin extends AppCompatActivity {
     private StringBuilder pinBuilder = new StringBuilder();
@@ -40,6 +41,12 @@ public class SetMpin extends AppCompatActivity {
         };
 
         setPinButtonListeners();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Utils.setLocale(this);
     }
 
     private void setPinButtonListeners() {

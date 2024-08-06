@@ -6,16 +6,30 @@
         <item name="colorOnPrimary">@color/textDarkColor</item>
         <item name="colorSecondary">@color/primaryDarkColor</item>
         <item name="colorOnSecondary">@color/white</item>
-        <item name="android:statusBarColor" tools:targetApi="l">@android:color/transparent</item>
+        <item name="android:statusBarColor">@color/primaryDarkColor</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:windowBackground">@color/backgroundDarkColor</item>
         <item name="colorSurface">@color/surfaceDarkColor</item>
         <item name="colorOnSurface">@color/textDarkColor</item>
 
     </style>
 
+    <style name="myFullscreenAlertDialogStyle" parent="Theme.MyApp">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="colorAccent">@color/black</item>
+    </style>
+
     <style name="circleImageView" parent="Theme.MyApp">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="DatePickerTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/primaryColor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
     <style name="PinDigit">
@@ -39,10 +53,13 @@
         <item name="android:elevation">4dp</item>
     </style>
 
-
+    <style name="SeekBarColor"
+        parent="Widget.AppCompat.SeekBar">
+        <item name="colorAccent">@color/primaryDarkColor</item>
+    </style>
 
     <style name="HeaderStyle">
-        <item name="android:textSize">28sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:layout_marginBottom">16dp</item>
         <item name="android:textStyle">bold</item>

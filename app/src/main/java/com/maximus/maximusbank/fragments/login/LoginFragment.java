@@ -26,12 +26,10 @@ public class LoginFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_login, container, false);
 
         viewPager = getActivity().findViewById(R.id.viewPager);
-
         btnSignUp = view.findViewById(R.id.btnSignUp);
         btnSignIn = view.findViewById(R.id.btnSignIn);
         btnSignUp.setOnClickListener(v -> viewPager.setCurrentItem(1));
         btnSignIn.setOnClickListener(v -> startActivity(new Intent(getActivity(), OTPActivity.class)));
-
 
         return view;
     }

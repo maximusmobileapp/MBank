@@ -2,17 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 
     <application
+        android:name=".Utils.MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -22,94 +28,151 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApp"
         tools:targetApi="31">
-
         <activity
-            android:name=".SpiltBill"
-            android:exported="true">
-        </activity>
+            android:name=".activity.scanNpay.ScannerActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation"
+            android:exported="false"/>
         <activity
-            android:name=".TransactionHistory"
+            android:name=".activity.SettingActivity"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.share.ShareQR"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="true"/>
+        <activity
+            android:name=".activity.requestmoney.RequestMoney"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.fundTransfer.FT_Confirmation"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.account.OpenLoanActivity"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.account.LoanRepaymentActivity"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.account.LoanEnquiryActivity"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="false" />
+        <activity
+            android:name=".activity.account.LoanCalculatorActivity"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="false" />
+        <activity
+            android:name=".activity.fundTransfer.FT_Receipt"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="false" />
+        <activity
+            android:name=".activity.account.AccountStatementActivity"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="false" />
+        <activity
+            android:name=".activity.beneficiary.PreviewBeneficiaryActivity"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="false" />
+        <activity
+            android:name=".activity.beneficiary.AddBeneficiaryActivity"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="false" />
+        <activity
+            android:name=".activity.splitBill.SplitAmountActivity"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="false" />
+        <activity
+            android:name=".activity.splitBill.SpiltBillAmount"
+            android:configChanges="locale|screenSize|orientation"
             android:exported="true" />
         <activity
-            android:name=".CardControlActivity"
-            android:exported="true" >
-        </activity>
-        <activity
-            android:name=".SelfTransferActivity"
-            android:exported="false" />
-        <activity
-            android:name=".OtherBankActivity"
-            android:exported="false" />
-        <activity
-            android:name=".WithinBankActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FundTrans"
+            android:name=".TransactionHistory"
+            android:configChanges="locale|screenSize|orientation"
             android:exported="true" />
         <activity
             android:name=".activity.fundTransfer.FundTransferDashboard"
+            android:configChanges="locale|screenSize|orientation"
             android:exported="false" />
         <activity
             android:name=".activity.landing.OTPActivity"
+            android:configChanges="locale|screenSize|orientation"
             android:exported="false" />
         <activity
             android:name=".activity.landing.PasscodeActivity"
+            android:configChanges="locale|screenSize|orientation"
             android:exported="false" />
         <activity
             android:name=".activity.fundTransfer.PreviewActivity"
+            android:configChanges="locale|screenSize|orientation"
             android:exported="false" />
         <activity
-            android:name=".activity.fundTransfer.ThirdPartyTransferActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.DashboardActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.AccountActivity"
-            android:exported="false"
-            android:parentActivityName=".activity.DashboardActivity" />
-        <activity
-            android:name=".FundTransferActivity"
+            android:name=".activity.fundTransfer.WithinBankTransferActivity"
+            android:configChanges="locale|screenSize|orientation"
             android:exported="false"/>
         <activity
-            android:name=".activity.landing.OTP"
-            android:exported="false" />
-
-        <activity
-            android:name=".activity.cardcontrol.CardControlActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.fundTransfer.OtherBankActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.fundTransfer.SelfTransferActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ForgetPassword"
-            android:exported="false" />
-
-
-        <activity
-            android:name=".activity.landing.SetMpin"
-            android:exported="true" />
-
-
-
-        <activity
-            android:name=".SetMpin"
-            android:exported="true" />
-
-        <activity
-            android:name=".activity.landing.SplashActivity"
+            android:name=".activity.DashboardActivity"
+            android:configChanges="locale|screenSize|orientation"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
+            android:name=".activity.account.AccountActivity"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="true"
+            android:parentActivityName=".activity.DashboardActivity" >
+        </activity>
+        <activity
+            android:name=".activity.landing.OTP"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="false" />
+        <activity
+            android:name=".activity.cardcontrol.CardControlActivity"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="false" />
+        <activity
+            android:name=".activity.fundTransfer.OtherBankActivity"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="false" />
+        <activity
+            android:name=".activity.fundTransfer.SelfTransferActivity"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="false" />
+        <activity
+            android:name=".ForgetPassword"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="false" />
+        <activity
+            android:name=".activity.landing.SetMpin"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ChequeBook.ChequeBookRequest"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ChequeBook.ChequeBookActivity"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ChequeBook.StopChequeBook"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="true" />
+        <activity
+            android:name=".activity.landing.SplashActivity"
+            android:configChanges="locale|screenSize|orientation"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name=".activity.landing.LoginActivity"
+            android:configChanges="locale|screenSize|orientation"
             android:exported="true" />
     </application>
 

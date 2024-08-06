@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/txtsuccess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Success"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textColor="#16CD49"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/stop_text"
+            android:layout_below="@+id/txtsuccess"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="100dp"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

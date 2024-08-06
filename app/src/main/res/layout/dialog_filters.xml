@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/main"
-    android:background="@color/white">
+    android:id="@+id/main">
 
     <ImageButton
         android:id="@+id/imgclose"
@@ -11,7 +10,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
-        android:backgroundTint="@color/white"
         android:background="@color/transparent"
         android:src="@drawable/close" />
 
@@ -21,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="5dp"
-        android:backgroundTint="@color/white"
+        android:textColor="?attr/colorOnSurface"
         android:layout_toRightOf="@+id/imgclose"
         android:text="Filters"
         android:textSize="20dp" />
@@ -42,6 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
+                android:textColor="?attr/colorOnSurface"
                 android:layout_marginTop="20dp"
                 android:text="Status"
                 android:textSize="15dp" />
@@ -69,6 +68,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="20dp"
                     android:button="@null"
+                    android:textColor="?attr/colorOnSurface"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="Completed"
                     android:textSize="15dp" />
@@ -91,6 +91,7 @@
                     android:layout_marginStart="90dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="20dp"
+                    android:textColor="?attr/colorOnSurface"
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="Failed"
@@ -115,6 +116,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="20dp"
                     android:button="@null"
+                    android:textColor="?attr/colorOnSurface"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="Processing"
                     android:textSize="15dp" />
@@ -132,7 +134,7 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="30dp"
                         android:layout_marginRight="20dp"
-                        android:background="#808080" />
+                        android:textColor="?attr/colorOnSurface"/>
                 </LinearLayout>
 
             </RelativeLayout>
@@ -150,6 +152,7 @@
                     android:layout_height="wrap_content"
                     android:text="Payment method"
                     android:layout_marginStart="30dp"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="15dp"/>
 
                <CheckBox
@@ -161,6 +164,7 @@
                    android:textSize="15dp"
                    android:layout_marginEnd="20dp"
                    android:button="@null"
+                   android:textColor="?attr/colorOnSurface"
                    android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
                    android:layout_marginStart="30dp"
                    android:layout_marginTop="20dp" />
@@ -172,6 +176,7 @@
                     android:layout_below="@+id/txtwithin"
                     android:text="Other Bank"
                     android:textSize="15dp"
+                    android:textColor="?attr/colorOnSurface"
                     android:layout_marginEnd="20dp"
                     android:button="@null"
                     android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
@@ -185,6 +190,7 @@
                     android:layout_below="@+id/txtOtherbank"
                     android:text="Self Bank"
                     android:textSize="15dp"
+                    android:textColor="?attr/colorOnSurface"
                     android:layout_marginEnd="20dp"
                     android:button="@null"
                     android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
@@ -202,6 +208,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginLeft="20dp"
+                        android:textColor="?attr/colorOnSurface"
                         android:layout_marginTop="30dp"
                         android:layout_marginRight="20dp"
                         android:background="#808080" />
@@ -221,6 +228,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Date"
+                    android:textColor="?attr/colorOnSurface"
                     android:layout_marginStart="30dp"
                     android:textSize="15dp"/>
 
@@ -231,6 +239,7 @@
                     android:layout_below="@+id/txtdate"
                     android:text="This month"
                     android:textSize="15dp"
+                    android:textColor="?attr/colorOnSurface"
                     android:layout_marginEnd="20dp"
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
@@ -244,6 +253,7 @@
                     android:layout_below="@+id/txtmonth"
                     android:textSize="15dp"
                     android:button="@null"
+                    android:textColor="?attr/colorOnSurface"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="10dp"
@@ -257,6 +267,7 @@
                     android:layout_below="@+id/txtdays30"
                     android:textSize="15dp"
                     android:button="@null"
+                    android:textColor="?attr/colorOnSurface"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="10dp"
@@ -276,7 +287,7 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="30dp"
                         android:layout_marginRight="20dp"
-                        android:background="#808080" />
+                        android:background="?attr/colorOnSurface" />
                 </LinearLayout>
 
             </RelativeLayout>
@@ -361,7 +372,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginRight="20dp"
-                    android:background="#808080" />
+                    android:background="?attr/colorOnSurface" />
             </LinearLayout>
 
         </RelativeLayout>
@@ -372,9 +383,9 @@
                 android:layout_height="wrap_content"
                 android:text="Clear all"
                 android:background="@color/transparent"
-                android:textColor="@color/black"
+                android:textColor="?attr/colorOnSurface"
                 android:layout_marginBottom="10dp"
-                android:layout_marginStart="200dp"
+                android:layout_toLeftOf="@+id/btnapply"
                 android:layout_marginTop="10dp"
                 android:layout_below="@+id/relative5" />
 
@@ -383,10 +394,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Apply"
+                android:background="@drawable/button_background"
+                android:textColor="?attr/colorSurface"
+                android:layout_alignParentRight="true"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_toRightOf="@id/btnclear"
-                android:layout_marginStart="16dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_below="@+id/relative5"/>
 
 

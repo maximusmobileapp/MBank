@@ -3,15 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="?attr/colorSurface"
+    android:orientation="vertical"
     android:padding="16dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="4dp"
         android:layout_marginTop="8dp"
+        android:elevation="4dp"
         app:cardCornerRadius="8dp">
 
         <LinearLayout
@@ -24,9 +24,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Account Summary"
+                android:textColor="?attr/colorPrimary"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="?attr/colorPrimary" />
+                android:textStyle="bold" />
 
             <TableLayout
                 android:layout_width="match_parent"
@@ -35,33 +35,35 @@
                 android:stretchColumns="1">
 
                 <TableRow>
+
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:padding="8dp"
                         android:text="Account No."
-                        android:textStyle="bold"
-                        android:textColor="?attr/colorOnSurface" />
+                        android:textColor="?attr/colorOnSurface"
+                        android:textStyle="bold" />
 
                     <Spinner
                         android:id="@+id/spinner_account_numbers"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:padding="8dp"
-                        android:background="@drawable/spinner_background" />
+                        android:background="@drawable/spinner_background"
+                        android:padding="8dp" />
                 </TableRow>
 
                 <TableRow>
+
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:padding="8dp"
                         android:text="Balance (Rs.)"
-                        android:textStyle="bold"
-                        android:textColor="?attr/colorOnSurface" />
+                        android:textColor="?attr/colorOnSurface"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -69,19 +71,20 @@
                         android:layout_weight="1"
                         android:padding="8dp"
                         android:text="10,527.50"
-                        android:textStyle="bold"
-                        android:textColor="?attr/colorOnSurface" />
+                        android:textColor="?attr/colorOnSurface"
+                        android:textStyle="bold" />
                 </TableRow>
 
                 <TableRow>
+
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:padding="8dp"
                         android:text="Expiry Date"
-                        android:textStyle="bold"
-                        android:textColor="?attr/colorOnSurface" />
+                        android:textColor="?attr/colorOnSurface"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -89,8 +92,8 @@
                         android:layout_weight="1"
                         android:padding="8dp"
                         android:text="-"
-                        android:textStyle="bold"
-                        android:textColor="?attr/colorOnSurface" />
+                        android:textColor="?attr/colorOnSurface"
+                        android:textStyle="bold" />
                 </TableRow>
             </TableLayout>
 
@@ -98,8 +101,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Note: Interest is calculated up to previous month end."
-                android:textSize="12sp"
-                android:textColor="?attr/colorOnSurface" />
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="12sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -112,36 +115,39 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="View Account Details"
-                    app:backgroundTint="?attr/colorPrimary"
                     android:textColor="?attr/colorSurface"
-                    app:cornerRadius="8dp"/>
+                    app:backgroundTint="?attr/colorPrimary"
+                    app:cornerRadius="8dp"
+                    android:visibility="gone"/>
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTransferFunds"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Transfer Funds"
-                    app:backgroundTint="?attr/colorPrimary"
                     android:textColor="?attr/colorSurface"
-                    app:cornerRadius="8dp"/>
+                    app:backgroundTint="?attr/colorPrimary"
+                    app:cornerRadius="8dp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Account Enquiry"
-                    app:backgroundTint="?attr/colorPrimary"
                     android:textColor="?attr/colorSurface"
-                    app:cornerRadius="8dp"/>
+                    app:backgroundTint="?attr/colorPrimary"
+                    app:cornerRadius="8dp" />
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/txtAccStatement"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Account Statement"
-                    app:backgroundTint="?attr/colorPrimary"
                     android:textColor="?attr/colorSurface"
-                    app:cornerRadius="8dp"/>
+                    app:backgroundTint="?attr/colorPrimary"
+                    app:cornerRadius="8dp" />
             </LinearLayout>
 
             <TextView

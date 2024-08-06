@@ -7,24 +7,32 @@
     android:background="?attr/colorSurface"
     tools:context=".MainActivity">
 
-    <!-- Background Image -->
     <RelativeLayout
-        android:id="@+id/backgroundImage"
+        android:id="@+id/topSection"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="?attr/colorPrimary" />
+        android:layout_height="250dp"
+        android:background="?attr/colorPrimary"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/letter_m"/>
+
+    </RelativeLayout>
 
     <!-- CardView for the Sign-In form -->
     <androidx.cardview.widget.CardView
+        android:id="@+id/signInCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/backgroundImage"
+        android:layout_below="@id/topSection"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="-80dp"
-        app:cardBackgroundColor="?attr/colorSurface"
-        app:cardElevation="8dp"
-        app:cardCornerRadius="8dp">
+        android:layout_marginTop="-50dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"

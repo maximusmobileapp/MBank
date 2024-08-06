@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/curved_background"
+    android:backgroundTint="?attr/colorSurface"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/relative2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/btmrupees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Rupees"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btmclose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="5dp"
+                android:background="@color/transparent"
+                android:src="@drawable/close" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeamount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative2">
+
+            <EditText
+                android:id="@+id/et_amu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:hint="@string/et_amu_hint"
+                android:inputType="number" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativereason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeamount"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/txtfor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/For"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtfor"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:hint="@string/reason" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativewhom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativereason"
+            android:layout_marginHorizontal="10dp">
+
+            <TextView
+                android:id="@+id/txtwhom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/whom"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linearContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtwhom"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="@dimen/_8sdp"
+                    app:cardCornerRadius="@dimen/_25sdp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgContact"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="@dimen/_2sdp"
+                        android:background="@drawable/circular_bg"
+                        android:foregroundGravity="center_horizontal"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/person"
+                        android:visibility="gone" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/txtContactName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgContact"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_toLeftOf="@+id/imgContact"
+                    android:layout_toRightOf="@+id/imgContact"
+                    android:gravity="center"
+                    android:text="Kiran"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="15dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/imgadd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtwhom"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="31dp"
+                android:layout_toRightOf="@+id/linearContact"
+                android:background="@color/transparent"
+                android:src="@drawable/add" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativewhom"
+            android:layout_margin="10dp"
+            android:visibility="gone">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_contacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="horizontal" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnsend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativewhom"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="SEND"
+            android:textColor="?attr/colorSurface"
+            android:textStyle="bold"
+            app:backgroundTint="?attr/colorPrimary"
+            app:cornerRadius="8dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

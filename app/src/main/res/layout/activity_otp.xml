@@ -7,6 +7,15 @@
     android:background="?attr/colorSurface"
     android:padding="16dp">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/letter_m"/>
+
     <!-- Header -->
     <TextView
         android:id="@+id/header"
@@ -14,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="OTP"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
@@ -79,15 +88,16 @@
     <GridLayout
         android:id="@+id/pin_pad"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/_240sdp"
         android:columnCount="3"
+        android:paddingHorizontal="@dimen/_16sdp"
         android:rowCount="4"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/otp_display"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:padding="16dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.968"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otp_display"
+        app:layout_constraintVertical_bias="0.10">
 
         <!-- PIN pad buttons -->
         <Button
@@ -134,7 +144,12 @@
             android:id="@+id/button9"
             style="@style/PinButton"
             android:text="9" />
-        <View android:layout_width="0dp" android:layout_height="0dp" android:layout_rowWeight="1" android:layout_columnWeight="1"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1" />
 
         <Button
             android:id="@+id/button0"

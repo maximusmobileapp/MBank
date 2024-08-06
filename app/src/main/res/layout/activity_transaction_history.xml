@@ -7,14 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".TransactionHistory">
 
+
     <LinearLayout
         android:id="@+id/relativesearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:background="@drawable/rounded_bg"
+        android:background="@drawable/rounded_edittext_bg"
         android:orientation="horizontal"
         android:padding="5dp">
 
@@ -144,7 +145,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="25dp"
-        android:background="@color/lightgray"
+        android:background="?attr/colorSecondary"
         android:layout_below="@+id/horizontalview"
         android:layout_marginTop="10dp">
 
@@ -152,6 +153,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="July 2024"
+            android:textColor="?attr/colorOnSurface"
             android:layout_marginTop="5dp"
             android:layout_marginStart="20dp"/>
 

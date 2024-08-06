@@ -5,26 +5,35 @@
     android:background="?attr/colorSurface"
     android:padding="16dp">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/letter_m"/>
+
     <!-- Header -->
     <TextView
         android:id="@+id/header"
         style="@style/HeaderStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/_8sdp"
         android:text="Set MPIN"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/logo" />
 
     <TextView
         android:id="@+id/pin_prompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="Enter Pin Code"
         android:textColor="?attr/colorOnSurface"
-        android:textSize="24sp"
+        android:textSize="@dimen/_18sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header" />
@@ -33,7 +42,7 @@
         android:id="@+id/pin_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,10 +70,10 @@
         android:id="@+id/confirm_pin_prompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="Confirm Pin Code"
         android:textColor="?attr/colorOnSurface"
-        android:textSize="24sp"
+        android:textSize="@dimen/_18sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/pin_display" />
@@ -73,7 +82,7 @@
         android:id="@+id/pin_confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,15 +109,16 @@
     <GridLayout
         android:id="@+id/pin_pad"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/_240sdp"
         android:layout_marginTop="16dp"
         android:columnCount="3"
-        android:padding="16dp"
+        android:paddingHorizontal="16dp"
         android:rowCount="4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pin_confirm">
+        app:layout_constraintTop_toBottomOf="@id/pin_confirm"
+        app:layout_constraintVertical_bias="0.10">
 
         <!-- PIN pad buttons -->
         <Button

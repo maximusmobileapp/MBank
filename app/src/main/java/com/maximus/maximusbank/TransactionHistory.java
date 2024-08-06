@@ -26,6 +26,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.maximus.maximusbank.Model.Transaction;
+import com.maximus.maximusbank.Utils.Utils;
 import com.maximus.maximusbank.adapter.TransactionListAdapter;
 
 import org.json.JSONArray;
@@ -147,6 +148,12 @@ public class TransactionHistory extends AppCompatActivity {
                 amountBottomSheet();
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Utils.setLocale(this);
     }
 
     private void showPopupMenu(View view) {

@@ -1,0 +1,266 @@
+<resources>
+    <string name="app_name">मैक्सिमस बैंक</string>
+    <string name="hello_blank_fragment">नमस्ते खाली अंश</string>
+    <string name="home">मुखपृष्ठ</string>
+    <string name="accounts">खाते</string>
+    <string name="recent_transactions">हाल की लेन-देन</string>
+    <string name="third_party_transfer">फंड ट्रांसफर</string>
+    <string name="manage_beneficiaries">लाभार्थियों का प्रबंधन</string>
+    <string name="settings">सेटिंग्स</string>
+    <string name="about_us">हमारे बारे में</string>
+    <string name="help">सहायता</string>
+    <string name="share">साझा करें</string>
+    <string name="app_info">ऐप जानकारी</string>
+    <string name="logout">लॉगआउट</string>
+    <string name="back_button">वापस</string>
+    <string name="register">रजिस्टर</string>
+    <string name="mobile_hint">मोबाइल नंबर दर्ज करें</string>
+    <string name="email_hint">ईमेल दर्ज करें</string>
+    <string name="account_number">खाता नंबर</string>
+    <string name="sign_up">साइन अप</string>
+    <string name="sign_in">साइन इन</string>
+    <string name="card_control">कार्ड नियंत्रण</string>
+    <string name="fund_transfer">फंड ट्रांसफर</string>
+    <string name="other_bank">अन्य बैंक ट्रांसफर</string>
+    <string name="self_transfer">स्वयं ट्रांसफर</string>
+    <string name="third_party">बैंक के भीतर ट्रांसफर</string>
+
+
+    <string name="account_overview">खाता अवलोकन</string>
+    <string name="selected_contacts">चयनित संपर्क</string>
+    <string name="split_now">अभी विभाजित करें</string>
+    <string name="total_bill">कुल बिल</string>
+    <string name="contacts">संपर्क</string>
+    <string name="enter_amount">₹ राशि दर्ज करें</string>
+    <string name="select_account_type">खाता प्रकार चुनें</string>
+    <string name="enter_account_number">खाता नंबर दर्ज करें</string>
+    <string name="bank_name">बैंक का नाम</string>
+    <string name="enter_bank_name">बैंक का नाम दर्ज करें</string>
+    <string name="transfer_limit">स्थानांतरण सीमा</string>
+    <string name="enter_transfer_limit">स्थानांतरण सीमा दर्ज करें</string>
+    <string name="beneficiary_name">लाभार्थी का नाम</string>
+    <string name="enter_beneficiary_name">लाभार्थी का नाम दर्ज करें</string>
+    <string name="preview">पूर्वावलोकन</string>
+    <string name="account_type">खाता प्रकार</string>
+
+
+    <string name="cheque_book">चेक बुक</string>
+    <string name="stop_book">चेक रोकने का अनुरोध</string>
+    <string name="within_bank">बैंक के भीतर</string>
+    <string name="other_bankk">अन्य बैंक</string>
+    <string name="split_bill">बिल विभाजित करें</string>
+    <string name="acc_no">खाता नंबर</string>
+    <string name="no_pages">पृष्ठों की संख्या</string>
+    <string name="pref_add">प्राथमिक पता चुनें</string>
+    <string name="comm_add">संचार पता</string>
+    <string name="pickup">24x7 पिकअप</string>
+    <string name="confirm">पुष्टिकरण</string>
+    <string name="clear">स्पष्ट करें</string>
+    <string name="from_acc">खाता से</string>
+    <string name="add_benef">लाभार्थी जोड़ें</string>
+    <string name="et_acc_no">खाता नंबर दर्ज करें</string>
+    <string name="ifsc">IFSC</string>
+    <string name="et_ifsc">IFSC दर्ज करें</string>
+    <string name="amu">राशि</string>
+    <string name="et_amu">राशि दर्ज करें</string>
+    <string name="remark">टिप्पणी</string>
+    <string name="et_remark">टिप्पणी दर्ज करें</string>
+    <string name="btn_continue">जारी रखें</string>
+    <string name="btn_addbenef">लाभार्थी जोड़ें</string>
+    <string name="avil_blce">उपलब्ध बैलेंस</string>
+    <string name="to_acc">खाता में</string>
+    <string name="total_amu">कुल बिल राशि</string>
+    <string name="btn_add">जोड़ें</string>
+    <string name="search_trans">लेन-देन खोजें</string>
+    <string name="status">स्थिति</string>
+    <string name="pay_method">भुगतान विधि</string>
+    <string name="date">तारीख</string>
+    <string name="pay_type">भुगतान प्रकार</string>
+    <string name="july">जुलाई 2024</string>
+    <string name="within">बैंक के भीतर ट्रांसफर</string>
+    <string name="select_benef">लाभार्थी चुनें</string>
+    <string name="XX">XXXX.XX</string>
+    <string name="No.">237773XXXX73733</string>
+    <string name="clear_all">सभी मिटाएँ</string>
+    <string name="apply">लागू करें</string>
+    <string name="fr_date">तारीख से</string>
+    <string name="to_date">तारीख तक</string>
+    <string name="date_format">DD/MM/YYYY</string>
+    <string name="this_month">इस महीने</string>
+    <string name="last_30">पिछले 30 दिन</string>
+    <string name="last_90">पिछले 90 दिन</string>
+    <string name="self_bank">स्वयं का बैंक</string>
+    <string name="completed">पूर्ण</string>
+    <string name="fail">असफल</string>
+
+    <string name="process">प्रक्रिया में</string>
+    <string name="filters">फ़िल्टर</string>
+    <string name="bal">बैलेंस</string>
+    <string name="card_no">कार्ड नंबर</string>
+    <string name="card">कार्ड नंबर : 72 XXXX XXX XX 62</string>
+    <string name="unblock">अनब्लॉक करें</string>
+    <string name="name">नाम</string>
+    <string name="phone">फ़ोन</string>
+    <string name="pay_from">भुगतान करें</string>
+    <string name="review">समीक्षा</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="hello">नमस्ते</string>
+    <string name="address">मुंबई जीपीओ: 400001, मुंबई तालुका, मुंबई जिला, महाराष्ट्र राज्य</string>
+    <string name="add">पता</string>
+    <string name="sel_state">राज्य चुनें</string>
+    <string name="sel_city">शहर चुनें</string>
+    <string name="pickup_loc">पिकअप स्थान चुनें</string>
+    <string name="cheque_success">खाता XX9723 के लिए चेक बुक अनुरोध स्वीकार कर लिया गया है। डिलीवरी 7 कार्य दिवसों में की जाएगी</string>
+    <string name="chequeno"> चेक नंबर </string>
+    <string name="enter_chequeno"> चेक नंबर दर्ज करें </string>
+    <string name="ReasonChequeStop"> रोकने का कारण </string>
+    <string name="Success">सफलता!</string>
+    <string name="stop_text"> आपका अनुरोध पूरा हो गया है</string>
+    <string name="depositto">जमा करें</string>
+    <string name="capture_image">चेक छवि कैप्चर करें</string>
+    <string name="capture_front">फ्रंट छवि कैप्चर करें</string>
+    <string name="capture_back">पीछे की छवि कैप्चर करें</string>
+    <string name="cheque_deposit">चेक जमा</string>
+
+
+    <string-array name="spinner_items">
+        <item>खाता नंबर चुनें</item>
+        <item>95646546548</item>
+        <item>95884844448</item>
+        <item>95511154451</item>
+        <item>95255151515</item>
+    </string-array>
+
+    <array name="spinner1">
+        <item name="view_only">कृपया खाता चुनें</item>
+    </array>
+
+    <array name="spinner2">
+        <item name="view_only">लाभार्थी का नाम चुनें</item>
+    </array>
+
+    <array name="AccountNo">
+        <item name="view_only">खाता नंबर चुनें</item>
+        <item>234454XXX7899</item>
+        <item>886672XXXX2782</item>
+    </array>
+
+    <array name="NoPages">
+        <item name="view_only">पृष्ठों का चयन करें</item>
+        <item>"25"</item>
+        <item>"50"</item>
+    </array>
+
+    <array name="State">
+        <item name="view_only">राज्य चुनें</item>
+        <item>महाराष्ट्र</item>
+        <item>असम</item>
+        <item>गुजरात</item>
+        <item>आंध्र प्रदेश</item>
+    </array>
+
+    <array name="City">
+        <item name="view_only">शहर चुनें</item>
+        <item>मुंबई</item>
+        <item>हैदराबाद</item>
+        <item>चेन्नई</item>
+        <item>बेंगलुरू</item>
+    </array>
+
+    <array name="Location">
+        <item name="view_only">स्थान चुनें</item>
+        <item>BKC टॉवर</item>
+        <item>वागले एस्टेट</item>
+        <item>90 फीट रोड</item>
+        <item>हिल रोड</item>
+    </array>
+
+    <array name="Address">
+        <item name="view_only">पता चुनें</item>
+        <item>B-101, भारत नगर रोड, G ब्लॉक BKC, बांद्रा कुर्ला कॉम्प्लेक्स, बांद्रा ईस्ट, मुंबई,
+            महाराष्ट्र 400051
+        </item>
+        <item>G ब्लॉक रोड, G ब्लॉक BKC, बांद्रा कुर्ला कॉम्प्लेक्स, बांद्रा ईस्ट, मुंबई, महाराष्ट्र
+            400098
+        </item>
+        <item>WRHJ+W24, कर्मवीर भाऊराव पाटिल मार्ग, मंत्रालय, फोर्ट, मुंबई, महाराष्ट्र 400032
+        </item>
+        <item>C-10, MIDC सेंट्रल रोड, मारोल MIDC इंडस्ट्री एस्टेट, अंधेरी ईस्ट, मुंबई, महाराष्ट्र
+            400093
+        </item>
+    </array>
+
+    <array name="Reason">
+        <item name="view_only">रोकने का कारण</item>
+        <item>चेक बुक प्राप्त नहीं हुई</item>
+        <item>चेक बुक खो गई</item>
+        <item>चेक बुक चोरी हो गई</item>
+        <item>चेक खो गया</item>
+        <item>चेक का भुगतान रोकें</item>
+        <item>गलत राशि खर्च की गई</item>
+        <item>चेक जाली</item>
+    </array>
+
+    <string name="Rs">₹ 200 तक</string>
+    <string name="Rs1">₹ 200 - ₹ 500</string>
+    <string name="Rs2">₹ 500 - ₹ 2,000</string>
+    <string name="Rs3">₹ 2,000 से अधिक</string>
+    <string name="change_theme">थीम बदलें</string>
+    <string name="change_language">भाषा बदलें</string>
+    <string name="light_theme">लाइट थीम</string>
+    <string name="dark_theme">डार्क थीम</string>
+    <string name="change_password">पासवर्ड बदलें</string>
+    <string name="change_your_account_password">अपने खाता पासवर्ड को बदलें</string>
+    <string name="other">अन्य</string>
+    <string name="theme">थीम</string>
+    <string name="language">भाषा</string>
+    <string name="choose_your_language">अपनी भाषा चुनें</string>
+    <string name="recent_transaction">हाल की लेनदेन</string>
+    <string name="beneficiary">लाभार्थी</string>
+    <string name="request">अनुरोध</string>
+    <string name="welcome_back">स्वागत है!</string>
+    <string name="account_balance">खाता शेष</string>
+    <string name="other_services">अन्य सेवाएँ</string>
+    <string name="recent_activity">हाल की गतिविधि</string>
+
+    <string name="turn_on_flashlight">फ्लैश</string>
+    <string name="step">चरण शीर्षक</string>
+    <string name="done">समाप्त</string>
+    <string name="et_ifsc_hint">आईएफएससी दर्ज करें</string>
+    <string name="et_amu_hint">राशि दर्ज करें</string>
+
+    <string name="pay_mode">बैंक स्थानांतरण</string>
+    <string name="pay_time">भुगतान समय\n29 जुलाई 2024 11.24</string>
+    <string name="ref_no">संदर्भ संख्या\n00580023477</string>
+    <string name="idr_hint">₹ 1,00,000</string>
+    <string name="total_pay">कुल भुगतान</string>
+    <string name="pay_success">आपका भुगतान सफलतापूर्वक हो गया है।</string>
+    <string name="payment">भुगतान सफलता!</string>
+    <string name="Ref_no">संदर्भ संख्या</string>
+    <string name="pay_tym">भुगतान समय</string>
+    <string name="from">से</string>
+    <string name="to">तक</string>
+    <string name="date_format_hint">दिनांक प्रारूप</string>
+    <string name="account_statement">खाता विवरण</string>
+    <string name="loan_calculator">ऋण कैलकुलेटर</string>
+    <string name="loan_enquiry">ऋण पूछताछ</string>
+    <string name="loan_repayment">ऋण पुनर्भुगतान</string>
+    <string name="open_loan">एफडी के खिलाफ ऋण</string>
+    <string name="cheque_book_request">चेक बुक अनुरोध</string>
+    <string name="confirmation">पुष्टिकरण</string>
+    <string name="reciept">रसीद</string>
+    <string name="Account_statement">खाता विवरण</string>
+    <string name="request_money">पैसे का अनुरोध करें</string>
+    <string name="Rupees">कितना \u20B9?</string>
+    <string name="whom">किसे?</string>
+    <string name="For">किसलिए?</string>
+    <string name="reason">यदि आवश्यक हो, तो बताएं कि आप पैसे क्यों मांग रहे हैं?</string>
+    <string name="send">अनुरोध भेजा गया</string>
+    <string name="amount">\u20B9</string>
+    <string name="ok">ठीक है</string>
+    <string name="generate_qr">क्यूआर कोड उत्पन्न करें</string>
+    <string name="share_qr">क्यूआर कोड साझा करें</string>
+    <string name="save">सहेजें</string>
+
+
+</resources>

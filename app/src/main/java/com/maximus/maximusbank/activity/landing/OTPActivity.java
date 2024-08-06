@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.maximus.maximusbank.R;
+import com.maximus.maximusbank.Utils.Utils;
 
 public class OTPActivity extends AppCompatActivity {
     private StringBuilder otpBuilder = new StringBuilder();
@@ -32,6 +33,12 @@ public class OTPActivity extends AppCompatActivity {
         };
 
         setOtpButtonListeners();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Utils.setLocale(this);
     }
 
     private void setOtpButtonListeners() {

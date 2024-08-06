@@ -2,6 +2,7 @@ package com.maximus.maximusbank.activity.cardcontrol;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -11,7 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.maximus.maximusbank.Model.Card;
 import com.maximus.maximusbank.R;
+import com.maximus.maximusbank.Utils.Utils;
 import com.maximus.maximusbank.adapter.CardAdapter;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +32,8 @@ public class CardControlActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_control);
+        ImageView backPressImg = findViewById(R.id.backButton);
+        Utils.onBackPress(this, backPressImg);
         headerTextView = findViewById(R.id.headerTextView);
         headerTextView.setText(R.string.card_control);
         recyclerView = findViewById(R.id.recyclerView1);
@@ -42,6 +47,12 @@ public class CardControlActivity extends AppCompatActivity {
         recyclerView.setAdapter(cardAdapter);
 
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Utils.setLocale(this);
     }
 
 }

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.account.AccountStatementActivity">
+
+    <include
+        android:id="@+id/headerLayout"
+        layout="@layout/common_header" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAccountStatement"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerLayout"
+        android:layout_above="@+id/buttonPDF"/>
+
+
+
+        <Button
+            android:id="@+id/buttonPDF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="download in pdf format"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/button_background"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/buttonExcel"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textColor="?attr/colorSurface" />
+
+        <Button
+            android:id="@+id/buttonExcel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button_background"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="download in excel format"
+            android:layout_margin="@dimen/_10sdp"
+            android:textColor="?attr/colorSurface" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+{
+  "accountStatement": [
+    {
+      "date": "2024/07/30",
+      "description": "Deposit",
+      "amount": 1500.00
+    },
+    {
+      "date": "2024/07/29",
+      "description": "Grocery Purchase",
+      "amount": -75.50
+    },
+    {
+      "date": "2024/07/28",
+      "description": "Transfer to Savings",
+      "amount": -200.00
+    },
+    {
+      "date": "2024/04/12",
+      "description": "Transfer to FD",
+      "amount": 25000.00
+    },
+    {
+      "date": "2024/07/27",
+      "description": "Salary",
+      "amount": 2500.00
+    }
+  ]
+}

@@ -27,6 +27,7 @@ import com.facebook.shimmer.Shimmer;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.maximus.maximusbank.ForgetPassword;
 import com.maximus.maximusbank.R;
+import com.maximus.maximusbank.Utils.Utils;
 import com.maximus.maximusbank.fragments.login.LoginFragment;
 import com.maximus.maximusbank.fragments.login.RegisterFragment;
 
@@ -56,6 +57,12 @@ public class LoginActivity extends AppCompatActivity {
 
         viewPager.setAdapter(new ScreenSlidePagerAdapter(this));
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Utils.setLocale(this);
     }
 
     private class ScreenSlidePagerAdapter extends FragmentStateAdapter {

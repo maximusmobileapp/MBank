@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.maximus.maximusbank.Model.Card;
@@ -46,7 +47,8 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
     public static class CardViewHolder extends RecyclerView.ViewHolder {
 
         TextView txtCardNo;
-        Switch cardswitch,cardatm,cardpos,cardecom;
+        SwitchCompat cardatm,cardpos,cardecom;
+        SwitchCompat cardswitch;
         EditText etATM,etPOS,etecom;
         CardView cardview;
 

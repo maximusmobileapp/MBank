@@ -14,6 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:text="Date"
+            android:textColor="?attr/colorOnSurface"
             android:textSize="15dp" />
 
         <ImageButton
@@ -32,6 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/btmdate"
             android:layout_marginStart="20dp"
+            android:textColor="?attr/colorOnSurface"
             android:layout_marginTop="20dp"
             android:text="From Date" />
 
@@ -40,9 +42,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btmdate"
-            android:layout_marginStart="250dp"
-            android:layout_marginTop="20dp"
-            android:layout_toRightOf="@+id/txtfromdate"
+            android:layout_alignParentRight="true"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_margin="20dp"
             android:text="To Date" />
 
         <TextView
@@ -50,6 +52,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtfromdate"
+            android:textColor="?attr/colorOnSurface"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/calender"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:hint="DD-MM-YYYY" />
@@ -59,10 +64,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtfromdate"
-            android:layout_toRightOf="@+id/fromdate"
-            android:layout_marginStart="180dp"
-            android:layout_marginTop="10dp"
-            android:hint="DD-MM-YYYY" />
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:drawableRight="@drawable/calender"
+            android:drawablePadding="10dp"
+            android:hint="DD-MM-YYYY"
+            android:textColor="?attr/colorOnSurface" />
 
         <ImageView
             android:id="@+id/datepicker1"
@@ -70,6 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtfromdate"
             android:layout_marginStart="10dp"
+            android:visibility="gone"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@+id/fromdate"
             android:src="@drawable/calender" />
@@ -81,6 +92,7 @@
             android:layout_below="@+id/txtfromdate"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
+            android:visibility="gone"
             android:layout_toRightOf="@+id/todate"
             android:src="@drawable/calender" />
 
@@ -88,10 +100,11 @@
             android:id="@+id/btmonth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/datepicker1"
+            android:layout_below="@+id/todate"
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:textColor="?attr/colorOnSurface"
             android:button="@null"
             android:drawableRight="@android:drawable/btn_radio"
             android:text="This month"
@@ -105,6 +118,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:textColor="?attr/colorOnSurface"
             android:button="@null"
             android:drawableRight="@android:drawable/btn_radio"
             android:text="Last 30 days"
@@ -118,6 +132,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:textColor="?attr/colorOnSurface"
             android:button="@null"
             android:drawableRight="@android:drawable/btn_radio"
             android:text="Last 90 days"
@@ -128,22 +143,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btmdays90"
-            android:layout_marginStart="200dp"
+            android:layout_toLeftOf="@+id/btmapply"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@color/transparent"
             android:text="Clear all"
-            android:textColor="@color/black" />
+            android:textColor="?attr/colorOnSurface" />
 
         <Button
             android:id="@+id/btmapply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btmdays90"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_toRightOf="@+id/btmclear"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_background"
+            android:textColor="?attr/colorSurface"
+            android:layout_alignParentRight="true"
             android:text="Apply" />
 
 

@@ -1,72 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SpiltBill">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.splitBill.SpiltBillAmount">
+
+    <include
+        android:id="@+id/headerLayout"
+        layout="@layout/common_header"
+        />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/splitcard"
+        android:id="@+id/billCardView"
+        app:cardBackgroundColor="?attr/colorPrimary"
+        app:cardCornerRadius="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/lightblue"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="5dp">
+        android:layout_below="@+id/headerLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="8dp"
+        android:padding="10dp">
 
         <RelativeLayout
-            android:id="@+id/headerrelative"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/imgvector"
+            <TextView
+                android:id="@+id/totalBillTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/back" />
-
-            <TextView
-                android:id="@+id/txtitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="Split Bill"
+                android:layout_centerHorizontal="true"
                 android:textColor="@color/white"
-                android:textSize="20dp" />
+                android:layout_marginTop="8dp"
+                android:text="@string/total_bill"
+                android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/etamount"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txtitle"
-                android:layout_marginTop="30dp"
-                android:background="@color/transparent"
-                android:inputType="number"
-                android:gravity="center"
-                android:hint="Enter Amount" />
-
-            <Button
-                android:id="@+id/btnsearch"
+                android:id="@+id/totalAmountEditText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/etamount"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="10dp"
-                android:text="Search" />
+                android:layout_below="@id/totalBillTextView"
+                android:layout_centerHorizontal="true"
+                android:hint="@string/enter_amount"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_bg_white"
+                android:padding="10dp"
+                android:textSize="16sp" />
 
+            <Button
+                android:id="@+id/splitNowButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/totalAmountEditText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/white"
+                android:text="@string/split_now"
+                android:textColor="@color/black" />
         </RelativeLayout>
-
     </androidx.cardview.widget.CardView>
 
-    <ListView
-        android:id="@+id/listitems"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/splitcard"/>
+    <TextView
+        android:id="@+id/nearbyFriendsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/billCardView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textColor="?attr/colorOnSurface"
+        android:text="@string/contacts"
+        android:textSize="18sp" />
 
+    <ProgressBar
+        android:id="@+id/contactProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nearbyFriendsTextView"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contactsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nearbyFriendsTextView"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/recentTransactionsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contactsRecyclerView"
+        android:layout_marginStart="16dp"
+        android:textColor="?attr/colorOnSurface"
+        android:layout_marginTop="8dp"
+        android:text="@string/selected_contacts"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/noSelectedContactTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/recentTransactionsTextView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="14dp"
+        android:visibility="gone"
+        android:text="No Contact Selected"
+        android:textAlignment="center"
+        android:gravity="center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/selectedContactsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recentTransactionsTextView"
+        android:clipToPadding="false"
+        android:padding="8dp" />
 </RelativeLayout>

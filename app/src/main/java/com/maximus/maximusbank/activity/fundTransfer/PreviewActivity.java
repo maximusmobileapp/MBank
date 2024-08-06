@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.maximus.maximusbank.R;
+import com.maximus.maximusbank.Utils.Utils;
+
 
 import java.util.ArrayList;
 
@@ -23,5 +25,11 @@ public class PreviewActivity extends AppCompatActivity {
             previewText.append(data).append("\n");
         }
         previewTextView.setText(previewText.toString());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Utils.setLocale(this);
     }
 }

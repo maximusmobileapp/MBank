@@ -2,6 +2,8 @@ package com.maximus.maximusbank.activity.landing;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +11,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.window.OnBackInvokedDispatcher;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.biometric.BiometricManager;
@@ -17,6 +21,7 @@ import androidx.biometric.BiometricPrompt;
 import androidx.core.content.ContextCompat;
 
 import com.maximus.maximusbank.R;
+import com.maximus.maximusbank.Utils.Utils;
 import com.maximus.maximusbank.activity.DashboardActivity;
 
 import java.util.concurrent.Executor;
@@ -43,6 +48,25 @@ public class PasscodeActivity extends AppCompatActivity {
         checkFingerprintAvailability();
         fingerprintIcon.setOnClickListener(v -> authenticateWithFingerprint());
         setPinButtonListeners();
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                showLogoutDialog();
+            }
+        });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Utils.setLocale(this);
+    }
+
+    @NonNull
+    @Override
+    public OnBackInvokedDispatcher getOnBackInvokedDispatcher() {
+        return super.getOnBackInvokedDispatcher();
     }
 
     private void checkFingerprintAvailability() {
@@ -59,6 +83,27 @@ public class PasscodeActivity extends AppCompatActivity {
                 fingerprintIcon.setVisibility(View.GONE);
                 break;
         }
+    }
+
+    /*@Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        showLogoutDialog();
+    }*/
+
+    private void showLogoutDialog() {
+        new AlertDialog.Builder(PasscodeActivity.this)
+                .setTitle("Logout")
+                .setMessage("Are you sure you want to logout?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finishAffinity();
+
+                    }
+                })
+                .setNegativeButton("No", null)
+                .show();
     }
 
     private void authenticateWithFingerprint() {

@@ -14,6 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
+            android:textColor="?attr/colorOnSurface"
             android:text="Status"
             android:textSize="15dp" />
 
@@ -47,6 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="90dp"
+                android:textColor="?attr/colorOnSurface"
                 android:layout_marginEnd="20dp"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
@@ -70,6 +72,7 @@
                 android:layout_below="@+id/txtcomplete"
                 android:layout_marginStart="90dp"
                 android:layout_marginEnd="20dp"
+                android:textColor="?attr/colorOnSurface"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="Failed"
@@ -91,6 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtfail"
                 android:layout_marginStart="90dp"
+                android:textColor="?attr/colorOnSurface"
                 android:layout_marginEnd="20dp"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
@@ -104,9 +108,9 @@
                 android:layout_height="wrap_content"
                 android:text="Clear all"
                 android:background="@color/transparent"
-                android:textColor="@color/black"
+                android:textColor="?attr/colorOnSurface"
                 android:layout_marginBottom="10dp"
-                android:layout_marginStart="200dp"
+                android:layout_toLeftOf="@id/btmapply"
                 android:layout_marginTop="10dp"
                 android:layout_below="@+id/txtprocess" />
 
@@ -115,10 +119,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Apply"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="16dp"
-                android:layout_toRightOf="@+id/btmclear"
+                android:layout_margin="10dp"
+                android:background="@drawable/button_background"
+                android:layout_alignParentRight="true"
+                android:textColor="?attr/colorSurface"
                 android:layout_below="@+id/txtprocess"/>
 
         </RelativeLayout>

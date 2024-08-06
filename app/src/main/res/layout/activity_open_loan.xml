@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.account.OpenLoanActivity">
+
+    <include android:id="@+id/headerLayout"
+        layout="@layout/common_header"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/headerLayout"
+        android:padding="16dp"
+        android:layout_margin="@dimen/_20sdp"
+        android:background="@drawable/curved_background"
+        android:elevation="@dimen/_8sdp">
+
+        <EditText
+            android:id="@+id/etFdNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="FD Number"
+            android:drawableStart="@drawable/ic_fd_number"
+            android:drawablePadding="10dp"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext_bg"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/etLoanAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Loan Amount"
+            android:drawableStart="@drawable/ic_money"
+            android:drawablePadding="10dp"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext_bg"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/etInterestRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Interest Rate"
+            android:drawableStart="@drawable/ic_interest_rate"
+            android:drawablePadding="10dp"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext_bg"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:padding="12dp"
+            android:background="@drawable/button_background"/>
+    </LinearLayout>
+</RelativeLayout>

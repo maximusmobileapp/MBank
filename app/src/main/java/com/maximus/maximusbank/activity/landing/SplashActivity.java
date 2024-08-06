@@ -12,6 +12,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.maximus.maximusbank.R;
+import com.maximus.maximusbank.Utils.Utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -82,4 +83,10 @@ public class SplashActivity extends AppCompatActivity {
             e.printStackTrace();
     }
 }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Utils.setLocale(this);
+    }
 }

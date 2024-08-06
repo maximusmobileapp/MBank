@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    tools:context=".activity.account.LoanCalculatorActivity">
+
+    <include android:id="@+id/headerLayout"
+        layout="@layout/common_header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/headerLayout"
+        android:padding="16dp"
+        android:layout_margin="@dimen/_20sdp"
+        android:background="@drawable/curved_background"
+        android:elevation="@dimen/_8sdp">
+
+    <EditText
+        android:id="@+id/etPrincipalAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Principal Amount"
+        android:drawableStart="@drawable/ic_principal"
+        android:drawablePadding="10dp"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext_bg"/>
+
+    <EditText
+        android:id="@+id/etRateOfInterest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Rate of Interest"
+        android:drawableStart="@drawable/ic_interest_rate"
+        android:drawablePadding="10dp"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext_bg"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/etLoanTenure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Loan Tenure (in years)"
+        android:drawableStart="@drawable/ic_tenure"
+        android:drawablePadding="10dp"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext_bg"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext_bg"/>
+
+    <TextView
+        android:id="@+id/tvEmiResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EMI: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:textColor="?attr/colorSurface"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/rounded_textview"/>
+
+    </LinearLayout>
+</LinearLayout>

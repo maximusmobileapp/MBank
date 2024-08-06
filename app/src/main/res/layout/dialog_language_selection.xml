@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvDialogHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/change_language"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"
+        android:textColor="?attr/colorPrimary"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioEnglish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="English"
+            android:textColor="?attr/colorOnSurface"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:buttonTint="?attr/colorPrimary"/>
+
+        <RadioButton
+            android:id="@+id/radioHindi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="हिंदी"
+            android:textColor="?attr/colorOnSurface"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:buttonTint="?attr/colorPrimary"/>
+    </RadioGroup>
+
+</LinearLayout>
